@@ -12,7 +12,7 @@ public class Task4 {
         String address;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("What is your name? ");
+        System.out.print("What's your name? ");
         name = String.valueOf(br.readLine());
 
         System.out.println("Where do you live, " + name + "?");
