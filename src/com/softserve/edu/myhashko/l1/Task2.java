@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 
 public class Task2 {
     public static void main(String[] args) throws IOException {
-        System.out.println("How are you? ");
+        System.out.println("How do you feel? ");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String mood = br.readLine();
         System.out.println("You are " + mood);
