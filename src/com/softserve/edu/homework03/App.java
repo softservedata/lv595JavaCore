@@ -2,38 +2,38 @@ package com.softserve.edu.homework03;
 
 public class App {
 
-	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("It's correct program");
-		
+	
+	Employee employee = new Employee ("Nazar", 23, 8);
+	Employee employee1 = new Employee ("Ivan", 2, 5);
+	System.out.println(employee1.getSalary());
+	System.out.println(employee.getSalary());
 	}
 
 }
-class Person{
+
+class Employee {
 	private String name;
-	private String surname;
-	private int age;
+	private int rate;
+	private int hours;
+	static int totSum;
 	
-	private String getName() {
-		return name;
-	}
-	private void setName(String name) {
+	Employee (String name, int rate) {
 		this.name = name;
+		this.rate = rate;
 	}
-	private String getSurname() {
-		return surname;
+	Employee (String name, int rate, int hours){
+		this.name=name;
+		this.rate=rate;
+		this.hours=hours;
 	}
-	private void setSurname(String surname) {
-		this.surname = surname;
+	
+	int getSalary () {
+		int salary = rate * hours;
+		return salary;
 	}
-	private int getAge() {
-		return age;
-	}
-	private void setAge(int age) {
-		this.age = age;
-	}
+	
+	
 	
 	
 }
-
