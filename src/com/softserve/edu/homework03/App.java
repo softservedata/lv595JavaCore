@@ -25,13 +25,18 @@ public class App {
 		System.out.println(employee1.getSalary());
 		System.out.println(employee2.getSalary());
 		*/
-		Employee.setTotSum((int) (employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
-		System.out.println("Total salaries= " + Employee.totSum);
-		
+				
+		System.out.println("If you wont to chnage rates enter \" yes \"");
+		String rateChange = input.next();
+		if (rateChange.equals("yes")|| rateChange.equals("YES")) {
+			System.out.println("Enter new rate for first employee"); employee0.changeRate(input.nextInt());
+			System.out.println("Enter new rate for second employee"); employee1.changeRate(input.nextInt());
+			System.out.println("Enter new rate for third employee"); employee2.changeRate(input.nextInt());	
+		} else {
+			Employee.setTotSum((int) (employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
+			System.out.println("Total salaries= " + Employee.totSum);
+		}
 		//Changing rates for all employees
-		System.out.println("Enter new rate for first employee"); employee0.changeRate(input.nextInt());
-		System.out.println("Enter new rate for second employee"); employee1.changeRate(input.nextInt());
-		System.out.println("Enter new rate for third employee"); employee2.changeRate(input.nextInt());
 		
 		input.close();
 
@@ -43,6 +48,8 @@ public class App {
 		Employee.setTotSum((int) (employee0.getBonuses()+employee1.getBonuses()+employee2.getBonuses()));
 		System.out.println("Total salary = " + Employee.getTotSum());
 	}
+
+	
 }
 
 class Employee {
