@@ -7,7 +7,7 @@ public class NameAddress {
 		System.out.println("Where are you leave, " + name + "?");
 		Main.sc.nextLine();
 		String address = Main.sc.nextLine();
-		System.out.println("Your name is " + name + ". You leave on " + address + " street.\n");
+		System.out.println("Your name is " + name + ". You leave in " + address + ".\n");
 	}
 
 }
