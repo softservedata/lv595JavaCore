@@ -1,4 +1,4 @@
-package com.softserve.edu.jc01;
+package com.softserve.edu.homework01;
 
 import java.util.Scanner;
 

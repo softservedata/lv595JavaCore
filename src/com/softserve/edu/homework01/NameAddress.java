@@ -1,4 +1,4 @@
-package com.softserve.edu.jc01;
+package com.softserve.edu.homework01;
 
 public class NameAddress {
 	public static void nameAddress() {

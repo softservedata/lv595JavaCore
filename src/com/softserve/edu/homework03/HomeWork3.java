@@ -1,4 +1,4 @@
-package com.softserve.edu.jc03;
+package com.softserve.edu.homework03;
 
 public class HomeWork3 {
 	private String firstName;
