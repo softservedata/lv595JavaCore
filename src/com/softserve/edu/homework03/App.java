@@ -8,11 +8,11 @@ public class App {
 		Scanner input = new Scanner(System.in);
 
 		// Inputting Employees informations
-		System.out.println("Enter space separated name rate hours for first employee");
+		System.out.println("Enter space separated [name] [rate] [hours] for first employee");
 		Employee employee0 = new Employee(input.next(), input.nextInt(), input.nextInt());
-		System.out.println("Enter space separated name rate hoursfor second employee");
+		System.out.println("Enter space separated [name] [rate] [hours] for second employee");
 		Employee employee1 = new Employee(input.next(), input.nextInt(), input.nextInt());
-		System.out.println("Enter space separated name rate hours for third employee");
+		System.out.println("Enter space separated [name] [rate] [hours] for third employee");
 		Employee employee2 = new Employee(input.next(), input.nextInt(), input.nextInt());
 
 		// Printing Employees details
@@ -22,7 +22,7 @@ public class App {
 		System.out.println(employee2.toString());
 
 		// Checking is rates for employees require change
-		System.out.println("If you wont to change rates enter \" yes \".");
+		System.out.println("If you want to change rates enter \" yes \".");
 		String rateChange = input.next();
 
 		if (rateChange.equals("yes") || rateChange.equals("YES")) {
@@ -42,25 +42,30 @@ public class App {
 			System.out.println(employee2.toString());
 
 			// Calculating total salary with new rates
-			Employee.setTotSum((int) (employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
+			Employee.setTotSum((employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
 
 		} else {
 
 			// Calculating total salary with old rates
-			Employee.setTotSum((int) (employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
+			Employee.setTotSum((employee0.getSalary() + employee1.getSalary() + employee2.getSalary()));
 
 		}
 
 		// Checking if bonuses need to be added
-		System.out.println("If you wont to add bonuses enter \" yes \".");
+		System.out.println("If you want to add bonuses enter \" yes \".");
 		String addBonus = input.next();
 
 		if (addBonus.equals("yes") || addBonus.equals("YES")) {
-
+			
+			//Checking bonus amount to be applied
+			System.out.println("Enter bonus amount (percents) for each employee.");
+			
 			// Calculating total salary with bonuses
-			Employee.setTotSum((int) (employee0.getBonuses() + employee1.getBonuses() + employee2.getBonuses()));
+			Employee.setTotSum(employee0.getBonuses(input.nextInt()) + employee1.getBonuses(input.nextInt()) + employee2.getBonuses(input.nextInt()));
 
 		} else {
+			
+			System.out.println("No bonuses this time");
 
 		}
 
@@ -73,11 +78,11 @@ public class App {
 }
 
 class Employee {
-	// Scanner input = new Scanner(System.in);
+	
 	private String name;
 	private int rate;
 	private int hours;
-	static int totSum;
+	static float totSum;
 
 	String getName() {
 		return name;
@@ -103,12 +108,12 @@ class Employee {
 		this.hours = hours;
 	}
 
-	static int getTotSum() {
+	static float getTotSum() {
 		return totSum;
 	}
 
-	static void setTotSum(int totSum) {
-		Employee.totSum = totSum;
+	static void setTotSum(float f) {
+		Employee.totSum = f;
 	}
 
 	Employee() {
@@ -127,6 +132,7 @@ class Employee {
 
 	int getSalary() {
 		int salary = rate * hours;
+		//System.out.println(salary);
 		return salary;
 	}
 
@@ -141,7 +147,8 @@ class Employee {
 		return salary;
 	}
 
-	int getBonuses() {
-		return (int) (getSalary() * 1.1);
+	float getBonuses(int bonus) {
+		 
+		return (getSalary() + getSalary() * bonus/100);
 	}
 }
