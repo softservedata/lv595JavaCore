@@ -80,7 +80,7 @@ public class Employee {
     }
 
    public static void main(String[] args) throws Exception{
-//jlkjlk34ttest
+//jlkjlk34ttesttest2
         String currentEmployeeName;
         double currentEmployeeRate, currentEmployeeHours;
        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
