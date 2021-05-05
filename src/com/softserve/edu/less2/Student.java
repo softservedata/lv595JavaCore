@@ -45,8 +45,12 @@ public class Student {
         Student Student3rd = new Student(studentsName, studentsRating);
 
         System.out.println("Number of students: " + studentsNumber + " , total rating: " + totalRating + " , average rating: " + avrRating);
-
-
+/*
+        System.out.println("3rd student new rating");
+        studentsRating = Double.parseDouble(br.readLine());
+        Student3rd.setRating(studentsRating);
+        System.out.println("Number of students: " + studentsNumber + " , total rating: " + totalRating + " , average rating: " + avrRating);
+*/
     }
 
     public boolean setName(String arg){
