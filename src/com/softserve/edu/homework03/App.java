@@ -69,7 +69,7 @@ public class App {
 
 		}
 
-		System.out.println("Total salary = " + Employee.getTotSum());
+		System.out.println("Total salary = " + Employee.totSum);
 
 		input.close();
 
@@ -108,9 +108,9 @@ class Employee {
 		this.hours = hours;
 	}
 
-	static float getTotSum() {
+	/*static float getTotSum() {
 		return totSum;
-	}
+	}*/
 
 	static void setTotSum(float f) {
 		Employee.totSum = f;
