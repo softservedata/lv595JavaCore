@@ -4,16 +4,17 @@ public class Appl {
 
     private String name = "Ivan";
 
-    // overload
+    // Overload
     public void print() {
         System.out.println("name = " + name);
     }
 
-    // overload
+    // Overload
     public void print(String s) {
         System.out.println("s = " + s + "  name = " + name);
     }
 
+    // Overload
     public void print(int... keys) {
         System.out.println("print(int... key), keys:");
         for (int key : keys) {
@@ -24,7 +25,7 @@ public class Appl {
     public void print2(Object... keys) {
         System.out.println("print(int... key), keys:");
         for (Object key : keys) {
-            System.out.println("key = " + key);
+            System.out.println("key = " + key); // key.toString()
         }
     }
     
