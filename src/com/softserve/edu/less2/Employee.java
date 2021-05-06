@@ -25,7 +25,8 @@ public class Employee {
     public boolean setHours(double hours) {
         if (hours < 0) {
             return false;
-        } else {
+        }
+        else {
             this.hours = hours;
             return true;
         }
@@ -134,9 +135,9 @@ public class Employee {
        } while(!employee3rd.setHours(currentEmployeeHours));
 
        System.out.println("----------------------");
-       System.out.println("1st employee - " + employee1st.toString() + ", salary " + employee1st.getSalary() + ", bonuses - " + employee1st.getBonuses());
-       System.out.println("2nd employee - " + employee2nd.toString() + ", salary " + employee2nd.getSalary() + ", bonuses - " + employee2nd.getBonuses());
-       System.out.println("3rd employee - " + employee3rd.toString() + ", salary " + employee3rd.getSalary() + ", bonuses - " + employee3rd.getBonuses());
+       System.out.println("1st employee - " + employee1st + ", salary " + employee1st.getSalary() + ", bonuses - " + employee1st.getBonuses());
+       System.out.println("2nd employee - " + employee2nd + ", salary " + employee2nd.getSalary() + ", bonuses - " + employee2nd.getBonuses());
+       System.out.println("3rd employee - " + employee3rd + ", salary " + employee3rd.getSalary() + ", bonuses - " + employee3rd.getBonuses());
 
        System.out.println("Total Salary - " + (employee1st.getSalary() + employee2nd.getSalary() + employee3rd.getSalary()));
 

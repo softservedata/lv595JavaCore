@@ -14,7 +14,6 @@ public class Person{
     private String firstName, lastName;
     private int birthYear;
 
-
     public String getFirstName() {
         return firstName;
     }
@@ -40,6 +39,8 @@ public class Person{
     }
 
     Person(){
+        firstName = "";
+        lastName = "";
     }
 
     Person (String fName, String lName){
@@ -55,7 +56,9 @@ public class Person{
         return calendar.get(java.util.Calendar.YEAR) - birthYear;
     }
 
-    public void input(BufferReader br){ //} throws Exception{
+    public void input() throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         System.out.println("Input FirstName: ");
         firstName  = br.readLine();
         System.out.println("Input LastName: ");
@@ -69,7 +72,24 @@ public class Person{
     }
 
     public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Person person1 = new Person();
+        Person person2 = new Person();
+        Person person3 = new Person();
+        Person person4 = new Person();
+        Person person5 = new Person();
 
+        person1.input();
+        System.out.println("the age is " + person1.getAge());
+        person2.input();
+        System.out.println("the age is " + person2.getAge());
+        person3.input();
+        System.out.println("the age is " + person3.getAge());
+        person4.input();
+        System.out.println("the age is " + person4.getAge());
+        person5.input();
+        System.out.println("the age is " + person5.getAge());
+
+//        System.out.println("the age is ");
     }
 }
