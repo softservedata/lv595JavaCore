@@ -1,4 +1,4 @@
-package TaskOOPOne;
+package lesson3;
 
 import java.util.Scanner;
 
