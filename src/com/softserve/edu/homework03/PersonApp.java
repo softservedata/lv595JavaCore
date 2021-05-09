@@ -10,17 +10,11 @@ class Person {
 	private static int renameCounter = 0;
 
 	public Person() {
-		// System.out.println("Creating new person");
 		counter++;
-		// System.out.println(counter);
 	}
 
 	public Person(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		// System.out.println("Creating new person");
-		counter++;
-		// System.out.println(counter);
+		this.firstName = firstName;	this.lastName = lastName; counter++;
 	}
 
 	@Override
@@ -61,18 +55,11 @@ class Person {
 	}
 
 	public void input() {
-
-		// System.out.println("when input starts counter = " + counter);
 		System.out.println("Input " + counter + " person First Name, Last Name and YOB (space separated): ");
-		this.setFirstName(sc.next());
-		// System.out.println("Enter Last Name: ");
-		this.setLastName(sc.next());
-		// System.out.println("Enter Year of Birth: ");
-		this.setBirthYear(sc.nextInt());
+		this.setFirstName(sc.next()); this.setLastName(sc.next()); this.setBirthYear(sc.nextInt());
 	}
 	public void renameInput() {
-		renameCounter++;
-		System.out.println("Enter " + renameCounter + " person new First and Last name.");
+		System.out.println("Enter " + ++renameCounter + " person new First and Last name.");
 		this.firstName = sc.next();
 		this.lastName = sc.next();
 		if (renameCounter==counter) {
@@ -81,19 +68,17 @@ class Person {
 	}
 	
 	public void renameInputFirst() {
-		renameCounter++;
-		System.out.println("Enter " + renameCounter + " person new First.");
+		System.out.println("Enter " + ++renameCounter + " person new First.");
 		this.firstName = sc.next();
 		if (renameCounter==counter) {
 			renameCounter =0;
 		}
 	}
 	public void renameInputLast() {
-		renameCounter++;
-		System.out.println("Enter " + renameCounter + " person new Last name.");
+		System.out.println("Enter " + ++renameCounter + " person new Last name.");
 		this.lastName = sc.next();
 		if (renameCounter==counter) {
-			renameCounter =0;
+			renameCounter = 0;
 		}
 	}
 
@@ -102,8 +87,7 @@ class Person {
 	}
 
 	public void changeName(String fn, String ln) {
-		this.setFirstName(fn);
-		this.setLastName(ln);
+		this.setFirstName(fn); this.setLastName(ln);
 	}
 	public void changeFirst(String fn) {
 		this.setFirstName(fn);
@@ -139,11 +123,7 @@ public class PersonApp {
 		person5.setBirthYear(1990);
 		*/
 		
-		person1.output();
-		person2.output();
-		person3.output();
-		person4.output();
-		person5.output();
+		person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 
 		/*
 		System.out.println(person1.getAge()); System.out.println(person2.getAge());
@@ -151,56 +131,31 @@ public class PersonApp {
 		System.out.println(person5.getAge());
 		 */
 		
-		
 		while (1 > 0) {
 			System.out.println("If you want to change persons information enter:\n"
 					+ "\"First\" - to change First name \n\"Last\" - to chnage Last Name \n"
 					+ "\"Both\" - to change First and Last Name \nTo continue without changes press \"ENTER\".");
 			String condition = scan.nextLine();
 			if (condition.equals("both") || condition.equals("Both") || condition.equals("BOTH")) {
-				person1.renameInput();
-				person2.renameInput();
-				person3.renameInput();
-				person4.renameInput();
-				person5.renameInput();
+				person1.renameInput(); person2.renameInput(); person3.renameInput(); person4.renameInput(); person5.renameInput();
 
 				System.out.println("Persons infomation updated to:");
 
-				person1.output();
-				person2.output();
-				person3.output();
-				person4.output();
-				person5.output();
+				person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 			
 			} else if (condition.equals("FIRST") || condition.equals("First") || condition.equals("first")) {
-				person1.renameInputFirst();
-				person2.renameInputFirst();
-				person3.renameInputFirst();
-				person4.renameInputFirst();
-				person5.renameInputFirst();
+				person1.renameInputFirst(); person2.renameInputFirst(); person3.renameInputFirst(); person4.renameInputFirst(); person5.renameInputFirst();
 
 				System.out.println("Persons infomation updated to:");
 
-				person1.output();
-				person2.output();
-				person3.output();
-				person4.output();
-				person5.output();
+				person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 
 			} else if (condition.equals("LAST") || condition.equals("Last") || condition.equals("last")) {
-				person1.renameInputLast();
-				person2.renameInputLast();
-				person3.renameInputLast();
-				person4.renameInputLast();
-				person5.renameInputLast();
+				person1.renameInputLast(); person2.renameInputLast(); person3.renameInputLast(); person4.renameInputLast(); person5.renameInputLast();
 
 				System.out.println("Persons infomation updated to:");
 
-				person1.output();
-				person2.output();
-				person3.output();
-				person4.output();
-				person5.output();
+				person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 
 			} else {
 				System.out.println("Persons information didn't change.");
