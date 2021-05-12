@@ -104,12 +104,11 @@ public class PersonApp {
 
 		Scanner scan = new Scanner(System.in);
 		
-		Person person1 = new Person(); person1.input(); 
-		Person person2 = new Person(); person2.input(); 
-		Person person3 = new Person(); person3.input(); 
-		Person person4 = new Person(); person4.input(); 
-		Person person5 = new Person(); person5.input();
-		
+		System.out.println("Type \"yes\" if you wan tot add person. Press \"Enter\" to continue.");
+		while (scan.nextLine().toLowerCase().equals("yes")) {
+		Person person = new Person(); person.input(); 
+		System.out.println(person);
+		}
 		/*
 		Person person1 = new Person("Nazar", "Ivankiv");
 		person1.setBirthYear(1995);
@@ -121,36 +120,36 @@ public class PersonApp {
 		person4.setBirthYear(2000);
 		Person person5 = new Person("pokkk", "kokkk");
 		person5.setBirthYear(1990);
-		*/
+		
 		
 		person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
-
+*/
 		/*
 		System.out.println(person1.getAge()); System.out.println(person2.getAge());
 		System.out.println(person3.getAge()); System.out.println(person4.getAge());
 		System.out.println(person5.getAge());
 		 */
-		
+	/*	
 		while (1 > 0) {
 			System.out.println("If you want to change persons information enter:\n"
 					+ "\"First\" - to change First name \n\"Last\" - to chnage Last Name \n"
 					+ "\"Both\" - to change First and Last Name \nTo continue without changes press \"ENTER\".");
 			String condition = scan.nextLine();
-			if (condition.equals("both") || condition.equals("Both") || condition.equals("BOTH")) {
+			if (condition.toLowerCase().equals("both") ) {
 				person1.renameInput(); person2.renameInput(); person3.renameInput(); person4.renameInput(); person5.renameInput();
 
 				System.out.println("Persons infomation updated to:");
 
 				person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 			
-			} else if (condition.equals("FIRST") || condition.equals("First") || condition.equals("first")) {
+			} else if (condition.toLowerCase().equals("first")) {
 				person1.renameInputFirst(); person2.renameInputFirst(); person3.renameInputFirst(); person4.renameInputFirst(); person5.renameInputFirst();
 
 				System.out.println("Persons infomation updated to:");
 
 				person1.output(); person2.output(); person3.output(); person4.output(); person5.output();
 
-			} else if (condition.equals("LAST") || condition.equals("Last") || condition.equals("last")) {
+			} else if (condition.toLowerCase().equals("last")) {
 				person1.renameInputLast(); person2.renameInputLast(); person3.renameInputLast(); person4.renameInputLast(); person5.renameInputLast();
 
 				System.out.println("Persons infomation updated to:");
@@ -161,8 +160,10 @@ public class PersonApp {
 				System.out.println("Persons information didn't change.");
 				break;
 			}
-
+			
 		}
+		
+	*/	
 		scan.close();
-	}
+		}
 }
