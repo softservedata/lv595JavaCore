@@ -1,6 +1,8 @@
 package com.softserve.edu04;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ApplCondition {
     public static void main(String[] args) throws IOException {
@@ -106,7 +108,7 @@ public class ApplCondition {
         System.out.println("Variable 'a' = " + a);
         System.out.println("Variable 'b' = " + b);
         */
-        //
+        /*-
         int a = 67, b = 24;
         //if (a > 50 || (b = 72) < 50) {
         //if (a > 500 || (b = 72) < 50) {
@@ -115,7 +117,7 @@ public class ApplCondition {
         }
         System.out.println("Variable 'a' = " + a);
         System.out.println("Variable 'b' = " + b);
-        //
+        */
         /*-
         int temperature = 1;
         if (temperature < 10) {
@@ -128,7 +130,7 @@ public class ApplCondition {
         //System.out.println("ter: " + result);
         System.out.println("ter: " + (temperature < 10 ? "It’s too cold" : "It’s Ok") );
         */
-        /*-
+        // /*-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Do you enjoy Java? (yes/no/maybe): ");
         String input = br.readLine();
@@ -157,6 +159,6 @@ public class ApplCondition {
         } else {
         	System.out.println("Wrong! 2");
         }
-        */
+        // */
     }
 }
