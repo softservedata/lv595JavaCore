@@ -1,11 +1,9 @@
 package com.softserve.edu.homework04;
 
 public class App {
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
-		
+
 		FloatChecker float1 = new FloatChecker();
 		FloatChecker float2 = new FloatChecker();
 		FloatChecker float3 = new FloatChecker();
@@ -18,17 +16,23 @@ public class App {
 		System.out.println(float2.inRange());
 		System.out.println(float3.inRange());
 		
+
+		
+		IntChecker int1 = new IntChecker();
+		IntChecker int2 = new IntChecker();
+		IntChecker int3 = new IntChecker();
+		IntChecker int4 = new IntChecker();
+		
+		int1.setNumber();
+		int2.setNumber();
+		int3.setNumber();
+		int4.setNumber();
+	
+		int1.printMax();
+		int4.printMin();
 		
 		
-		
-		IntChecker case2 = new IntChecker();
-		
-		case2.setInt1();
-		case2.setInt2();
-		case2.setInt3();
-		
-		case2.printMax();
-		case2.printMin();
+
 		
 		HttpErrors error1 = HttpErrors.BadRequest;
 		
@@ -49,6 +53,6 @@ public class App {
 			System.out.println("Unknown HTTP error!");
 			break;
 		}
-	
+
 	}
 }
