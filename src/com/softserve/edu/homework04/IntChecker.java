@@ -1,55 +1,64 @@
 package com.softserve.edu.homework04;
 
 public class IntChecker {
-	private int int1;
-	private int int2;
-	private int int3;
+	private int number;
 	private int max;
 	private int min;
+	private static int numberOfNumbers;
+	private static int[] numbers = new int[10];
+
 	Reader read = new Reader();
-	
-	public IntChecker() {}
 
-	public void setInt1() {
-		
-		this.int1 = read.scanInt();
+	public IntChecker() {
 	}
 	
-	public void setInt2() {
-		this.int2 = read.scanInt();
+	public IntChecker(int number) {
+		this.number=number;
+		numbers[numberOfNumbers] = this.getNumber();
+		numberOfNumbers++;
 	}
 
-	public void setInt3() {
-		this.int3 = read.scanInt();
+	public void setNumber() {
+		this.number = read.scanInt();
+		numbers[numberOfNumbers] = this.getNumber();
+		numberOfNumbers++;
+
 	}
-	
-	public int getMax () {
-		max= this.int1;
-		if (this.int2>max) {
-			max=this.int2;
-		}
-		if (this.int3>max) {
-			max=this.int3;
+
+	public int getNumber() {
+		return number;
+	}
+
+	public int getMax() {
+		max = 0;
+		for (int k = 0; k < numberOfNumbers; k++) {
+			if (numbers[k] > max) {
+				max = numbers[k];
+			}
 		}
 		return max;
 	}
 	
-	public int getMin () {
-		min= this.int1;
-		if (this.int2<min) {
-			min=this.int2;
+
+	public int getMin() {
+		min = this.number;
+		for (int k = 0; k < numberOfNumbers; k++) {
+			if (numbers[k] < min) {
+				min = numbers[k];
+			}
 		}
-		if (this.int3<min) {
-			min=this.int3;
-		}
-		
 		return min;
 	}
-	
+
 	public void printMax() {
-		System.out.println("Maximum integer value  = " + getMax());	
-		}
+		System.out.println("Maximum integer value  = " + getMax());
+	}
+
 	public void printMin() {
-		System.out.println("Minimum integer value  = " + getMin());	
-		}
+		System.out.println("Minimum integer value  = " + getMin());
+	}
+	
+	public void resetCounter() {
+		numberOfNumbers=0;
+	}
 }
