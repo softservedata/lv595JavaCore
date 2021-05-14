@@ -1,7 +1,10 @@
 package com.softserve.edu.homework04;
 
 public enum HttpErrors {
-	BadRequest("Bad Request", 400), Unauthorized("Unauthorized", 401), Forbidden("Forbidden", 403), NotFound("Not Found", 404);
+	BadRequest("Bad Request", 400){public String flagError() {return "You made bad request!";}},
+	Unauthorized("Unauthorized", 401){public String flagError() {return "You are not authorized!";}},
+	Forbidden("Forbidden", 403){public String flagError() {return "You request is forbidden!";}},
+	NotFound("Not Found", 404){public String flagError() {return "Could not find!";}};
 
 //		BadRequest  Unauthorized Forbidden NotFound
 	private String name;
@@ -35,8 +38,9 @@ public enum HttpErrors {
 					+ "the client must authenticate itself to get the requested response.";
 		default:
 			return "Unknown error";
-		}
-		
+		}		
 	}
+	
+	public abstract String flagError();
 }
 

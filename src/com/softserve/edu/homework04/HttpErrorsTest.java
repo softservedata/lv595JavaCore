@@ -47,6 +47,13 @@ public class HttpErrorsTest {
 	
 	Assert.assertEquals(expectedD, actualD);
 	
+	String actualFlag;
+	String expectedFlag = "You made bad request!";
+	
+	actualFlag=error1.flagError();
+	
+	Assert.assertEquals(expectedFlag, actualFlag);
+	
 	}
 	
 	
@@ -68,6 +75,13 @@ public class HttpErrorsTest {
 	actualD=error1.getDiscription();
 	
 	Assert.assertEquals(expectedD, actualD);
+	
+	String actualFlag;
+	String expectedFlag = "You request is forbidden!";
+	
+	actualFlag=error1.flagError();
+	
+	Assert.assertEquals(expectedFlag, actualFlag);
 	
 	}
 	@Test
@@ -91,6 +105,13 @@ public class HttpErrorsTest {
 	
 	Assert.assertEquals(expectedD, actualD);
 	
+	String actualFlag;
+	String expectedFlag = "Could not find!";
+	
+	actualFlag=error1.flagError();
+	
+	Assert.assertEquals(expectedFlag, actualFlag);
+	
 	}
 	@Test
 	public void test4() {
@@ -110,6 +131,13 @@ public class HttpErrorsTest {
 	actualD=error1.getDiscription();
 	
 	Assert.assertEquals(expectedD, actualD);
+
+	String actualFlag;
+	String expectedFlag = "You are not authorized!";
+	
+	actualFlag=error1.flagError();
+	
+	Assert.assertEquals(expectedFlag, actualFlag);
 	
 	}
 
