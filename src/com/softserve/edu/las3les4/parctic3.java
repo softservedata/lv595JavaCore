@@ -1,8 +1,7 @@
-package com.softserve.edu;
+package com.softserve.edu.las3les4;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.String;
-import java.util.Locale;
 
 /* enum Continent {
     EU("Ukraine", "Poland"),

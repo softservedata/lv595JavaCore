@@ -1,4 +1,4 @@
-package com.softserve.edu;
+package com.softserve.edu.las3les4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
