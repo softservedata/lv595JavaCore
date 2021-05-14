@@ -1,6 +1,6 @@
 package com.softserve.edu.homework04;
 
-import static org.junit.Assert.*;
+
 
 import org.junit.After;
 import org.junit.AfterClass;

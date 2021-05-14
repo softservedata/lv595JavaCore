@@ -1,7 +1,7 @@
 package com.softserve.edu.homework04;
 
 public enum HttpErrors {
-	BadRequest("BadReques", 400), Unauthorized("Unauthorized", 401), Forbidden("Forbidden", 403), NotFound("NotFound", 404);
+	BadRequest("Bad Request", 400), Unauthorized("Unauthorized", 401), Forbidden("Forbidden", 403), NotFound("Not Found", 404);
 
 //		BadRequest  Unauthorized Forbidden NotFound
 	private String name;
