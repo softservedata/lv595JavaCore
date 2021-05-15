@@ -2,6 +2,7 @@ package com.softserve.edu.las3les4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Locale;
 
 
 enum Breed{
@@ -14,12 +15,25 @@ enum Breed{
     private final String breed;
 
     Breed(String kind){
-        this.breed = kind;
+        breed = kind;
     }
 
     public String getKind (){
-        return this.breed;
+        return breed;
     }
+
+    private Breed nextBreed (){
+        if (this == TAX) return DOG;
+        if (this == DOG) return PITBULL;
+        if (this == PITBULL) return BULLDOG;
+        if (this == BULLDOG) return CHAOCHAO;
+        if (this == CHAOCHAO) return SPITZ;
+         return TAX;
+
+    }
+//@Override
+ //   public Breed valueOf(String arg){}
+
 }
 
 
@@ -56,7 +70,7 @@ enum Breed{
 */
 
     public String getName (){
-        return this.name;
+        return name;
     }
 
     Dog(String name, Breed breed, int age) {
@@ -67,50 +81,25 @@ enum Breed{
     }
 
     public int getAge (){
-        return this.age;
+        return age;
     }
+
+    public void setBreed(Breed breed){
+        this.breed = breed;
+    }
+
+
 
     @Override
     public String toString() {
         return "Dog{" +
                 "name='" + name + '\'' +
                 ", breed=" + breed +
-                ", age=" + age +
+                " (" + breed.getKind() +
+                "), age=" + age +
                 '}';
     }
 
-    /*
-    private Dog nextHTTPError() {
-        if (this == Dog.E400)return E401;
-        if (this == Dog.E401)return E402;
-        if (this == Dog.E402)return E403;
-        if (this == Dog.E403)return E404;
-        if (this == Dog.E404)return E405;
-        if (this == Dog.E405)return E406;
-        if (this == Dog.E406)return E407;
-        if (this == Dog.E407)return E408;
-        if (this == Dog.E408)return E409;
-        if (this == Dog.E409)return E410;
-        return E400;
-    }
-*/
-    /*
-    public Dog knownHTTPError (int code){
-//        this = HTTPError.E400;
-        Dog result = Dog.E400;
-//        System.out.println(code);
-        do {
-//             System.out.println(result);
-            if (result.code == code) {
-//                System.out.println("Error known");
-                result.mark = true;
-                return result;
-            }
-            result = result.nextHTTPError();
-        } while (result != Dog.E400);
-        return result;
-    }
-*/
 }
 
 public class Hw4t2 {
@@ -127,6 +116,16 @@ public class Hw4t2 {
         if (maxAgeDog.getAge() < dog3.getAge())
              maxAgeDog = dog3;
         System.out.println("The oldest dog is " + maxAgeDog);
+//        /*
+        System.out.println("The 1stdog is " + dog1);
+        System.out.println("The 2nddog is " + dog2);
+        System.out.println("The 3rddog is " + dog3);
+/*        System.out.print("Breed for 1st dog? ");
+        String tempBreed = br.readLine().toUpperCase();
+        dog1.setBreed(Breed.valueOf(tempBreed));
+        System.out.println("The 1stdog is " + dog1);
+
+        */
 
         if (dog1.getName().equals(dog2.getName()))
             System.out.println(dog1 + " has same name as " + dog2);
@@ -135,16 +134,5 @@ public class Hw4t2 {
         if (dog2.getName().equals(dog3.getName()))
             System.out.println(dog2 + " has same name as " + dog3);
 
-/*        errorCode = Integer.parseInt(br.readLine());
-
-        Dog dog = Dog.E400;
-        dog = dog.knownHTTPError(errorCode);
-        if (dog.isMarked())
-            System.out.println("Error " + dog.getDescription());
-        else
-            System.out.println("Unknown Error!");
-    }
-
- */
     }
 }

@@ -27,8 +27,8 @@ enum Continent {
     AU(new String[]{"Australia"}, false),
     EU(new String[]{"Ukraine", "Poland"}, false),
     NA(new String[]{"USA", "Canada"}, false),
-    SA(new String[]{"Brazil", "Chilli0"}, false);
-    private final String[] countries;
+    SA(new String[]{"Brazil", "Chilli"}, false);
+    private String[] countries;
     private boolean active;
 
     Continent(String[] args1, boolean act) {
@@ -39,21 +39,36 @@ enum Continent {
         }
         this.active = act;
     }
+//    /*
         public Continent nextContinent() {
            if (this == Continent.AS) return AU;
             if (this == Continent.AU) return EU;
             if (this == Continent.EU) return NA;
             if (this == Continent.NA) return SA;
             return AS;
-
         }
+// */
+    /*
+    public void setContinent (Continent cont){
+        this.Continent = cont;
+    }
 
- /*
+
+    public void nextContinent() {
+        if (this == Continent.AS) this.setContinent(AU);
+        if (this == Continent.AU) this.setContinent(EU);
+        if (this == Continent.EU) this.setContinent(NA);
+        if (this == Continent.NA) this.setContinent(SA);
+        this.setContinent(AS);
+    }
+
+
  @Override
         public String toString(){
         return "";
         }
 */
+/*
         public Continent hasCountry (String arg){
              Continent result = AS;
              arg = arg.toLowerCase();
@@ -70,8 +85,31 @@ enum Continent {
              }
              while (result != AS);
              return result;
-
         }
+*/
+
+    public Continent hasCountry (String arg){
+        Continent result = this.AS;
+//        this.Continent = AS;
+        arg = arg.toLowerCase();
+//             System.out.println("country = "+arg);
+        do {
+//                System.out.println("\n" + result + ":");
+            result.active = false;
+            for (String country : result.countries) {
+//                System.out.print(country + ",");
+                if ((country.toLowerCase()).equals(arg)) {
+                    result.active = true;
+                    return result;
+                }
+            }
+//            this = this.nextContinent();
+             result = result.nextContinent();
+        }
+        while (result != AS);
+        return result;
+    }
+
 
         public boolean isActive (){
             return active;
@@ -88,7 +126,7 @@ public class parctic3 {
         System.out.print("Country? : ");
         country = br.readLine();
 //        Continent continent = Continent.hasCountry(country);
-        Continent continent = Continent.AS;
+        Continent continent = Continent.SA;
         continent = continent.hasCountry(country);
         if (continent.isActive())
 //        if (continent.hasCountry(country))
