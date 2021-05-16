@@ -4,37 +4,29 @@ package lesson4;
 import java.util.Scanner;
 
 public class Task3 {
+    public enum Errores {Bad_Request, Unauthorized, Payment_Required, Forbidden, Not_Found, Method_Not_Allowed, Not_Acceptable}
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the error HTTP number :");
+        System.out.println("Enter number HTTP error : ");
         int a = scanner.nextInt();
-
         if (a == 400)
-            System.out.println(" Bad Request ");
+            System.out.println(Errores.Bad_Request);
 
         else if (a == 401)
-            System.out.println("Unauthorized ");
+            System.out.println(Errores.Unauthorized);
 
         else if (a == 402)
-            System.out.println("Payment Required");
+            System.out.println(Errores.Payment_Required);
 
         else if (a == 403)
-            System.out.println("Forbidden ");
+            System.out.println(Errores.Forbidden);
         else if (a == 404)
-            System.out.println("Not Found ");
+            System.out.println(Errores.Not_Found);
         else if (a == 405)
-            System.out.println("Method Not Allowed");
+            System.out.println(Errores.Method_Not_Allowed);
         else if (a == 406)
-            System.out.println("Not Acceptable");
-        else if (a == 407)
-            System.out.println("Proxy Authentication Required");
-        else if (a == 408)
-            System.out.println("Request Timeout");
-        else if (a == 409)
-            System.out.println("Conflict");
-        else if (a == 410)
-            System.out.println("Gone");
+            System.out.println(Errores.Not_Acceptable);
         else
             System.out.println("incorrect input");
 
