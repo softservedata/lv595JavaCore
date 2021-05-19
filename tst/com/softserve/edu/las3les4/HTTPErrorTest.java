@@ -30,7 +30,7 @@ public class HTTPErrorTest {
 
     @Test
     public void knownHTTPError3() {
-        assertEquals(HTTPError.E400, httpError.knownHTTPError(411));
+        assertEquals(HTTPError.E400, httpError.knownHTTPError(400));
     }
 
 }

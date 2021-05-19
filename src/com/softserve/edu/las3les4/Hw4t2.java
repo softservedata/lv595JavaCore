@@ -3,6 +3,7 @@ package com.softserve.edu.las3les4;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Locale;
+import java.util.Objects;
 
 
 enum Breed{
@@ -88,7 +89,26 @@ enum Breed{
         this.breed = breed;
     }
 
+    public boolean sameName(Dog dog) {
+        return this.name.equals(dog.name) ? true : false;
+    }
 
+    public Dog oldest (Dog dog) {
+        return this.age > dog.age ? this : dog;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return age == dog.age && name.equals(dog.name) && breed == dog.breed;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, breed, age);
+    }
 
     @Override
     public String toString() {
