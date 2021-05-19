@@ -124,7 +124,7 @@ enum Breed{
 
 public class Hw4t2 {
 
-    public static void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception {
         int maxAge;
         Dog dog1 = new Dog("Max", Breed.DOG, 2);
         Dog dog2 = new Dog("Max", Breed.SPITZ, 5);
