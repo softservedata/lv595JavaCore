@@ -36,16 +36,16 @@ public class EraApp {
 		
 		System.out.print("Inter number of elements: ");
 		int n = sc.nextInt();
-		float [] numbers = new float [n];
+		float [] numbers1 = new float [n];
 		System.out.print("Enter first element of array: ");
-		numbers [0]= sc.nextFloat();
+		numbers1 [0]= sc.nextFloat();
 		System.out.print("Enter last element of array: ");
-		numbers [n-1] = sc.nextFloat();
+		numbers1 [n-1] = sc.nextFloat();
 		
-		float increment = (numbers[n-1] - numbers[0])/n;
-		for (int i = 1; i < numbers.length; i++) {
-			numbers[i] = numbers [i-1] + increment;
-			System.out.printf("%6.4f\n", numbers[i]);
+		float increment = (numbers1[n-1] - numbers1[0])/n;
+		for (int i = 1; i < numbers1.length; i++) {
+			numbers1[i] = numbers1 [i-1] + increment;
+			System.out.printf("%6.4f\n", numbers1[i]);
 		}
 		
 		
