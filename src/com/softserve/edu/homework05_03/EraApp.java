@@ -1,6 +1,5 @@
 package com.softserve.edu.homework05_03;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class EraApp {
