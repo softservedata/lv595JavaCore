@@ -1,4 +1,4 @@
-package lesson6Cars;
+package lesson6.Cars;
 
 public abstract class Car {
     protected String model;

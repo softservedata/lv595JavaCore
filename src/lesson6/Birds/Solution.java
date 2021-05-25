@@ -1,4 +1,4 @@
-package lesson6Birds;
+package lesson6.Birds;
 
 public class Solution {
     public static void main(String[] args) {

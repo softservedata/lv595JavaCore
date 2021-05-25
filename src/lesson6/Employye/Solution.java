@@ -1,4 +1,4 @@
-package lesson6Employye;
+package lesson6.Employye;
 
 public class Solution {
     public static void main(String[] args) {

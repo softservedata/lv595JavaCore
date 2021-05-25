@@ -1,4 +1,4 @@
-package lesson6Birds;
+package lesson6.Birds;
 
 public class Eagle extends FlyingBird {
     public Eagle(String feathers, String layEggs) {

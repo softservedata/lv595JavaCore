@@ -1,4 +1,4 @@
-package lesson6Birds;
+package lesson6.Birds;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package lesson6Employye;
+package lesson6.Employye;
 
 import java.util.Objects;
 

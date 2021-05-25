@@ -1,4 +1,4 @@
-package lesson6Employye;
+package lesson6.Employye;
 
 public class Developer extends Employee {
     private String position;

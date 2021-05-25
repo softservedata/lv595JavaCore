@@ -1,23 +1,23 @@
-package lesson6Cars;
+package lesson6.Cars;
 
-public class Sedan extends Car {
-    public Sedan(String model, double maxSpeed, int yearOfManufacture) {
+public class Truck extends Car {
+    public Truck(String model, double maxSpeed, int yearOfManufacture) {
         super(model, maxSpeed, yearOfManufacture);
     }
 
     @Override
     public void run() {
-        System.out.println("Sedan Run");
+        System.out.println("Truck Run ");
     }
 
     @Override
     public void stop() {
-        System.out.println("Sedan Stop");
+        System.out.println("Truck Stop ");
     }
 
     @Override
     public String toString() {
-        return "Sedan{" +
+        return "Truck{" +
                 "model='" + model + '\'' +
                 ", maxSpeed=" + maxSpeed +
                 ", yearOfManufacture=" + yearOfManufacture +
