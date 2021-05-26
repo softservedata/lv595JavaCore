@@ -3,7 +3,8 @@ package com.softserve.edu08inher.sub;
 import com.softserve.edu08inher.ClassA;
 import com.softserve.edu08inher.ClassB;
 
-public class Appl {
+public class Appl { // implements Serializable 
+	
 	public static void main(String[] args) {
 		System.out.println("The Start.");
 		//
