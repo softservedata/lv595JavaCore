@@ -127,7 +127,7 @@ class Employee implements Payment, Comparable<Employee>{
         int result = name.compareTo(obj.name);
         return result == 0 ? Integer.compare(this.id, obj.id) : result;
 */
-        return Double.compare(this.calculatePay(), obj.calculatePay());
+        return -1*Double.compare(this.calculatePay(), obj.calculatePay());
     }
 
     @Override
