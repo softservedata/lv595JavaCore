@@ -19,7 +19,7 @@ public class Hw1 {
     }
 }
 
-class SalariedEmployee extends Employee implements Payment{
+class SalariedEmployee extends Employee{ // implements Payment{
     private double workingDays;
     private String socialSecurityNumber;
 
