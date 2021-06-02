@@ -2,6 +2,7 @@ package com.softserve.edu.less7;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Hw1 {
     public static void main(String[] args) {
@@ -14,7 +15,9 @@ public class Hw1 {
         };
         System.out.println("Originall staff's list: " + Arrays.toString(employeers));
         Arrays.sort(employeers);
-        System.out.println("Sorted by wage staff's list: " + Arrays.toString(employeers));
+        System.out.println("Sorted by id staff's list: " + Arrays.toString(employeers));
+        Arrays.sort(employeers, new Employee.CalculatePayComparator());
+        System.out.println("ReverSorted by wage staff's list: " + Arrays.toString(employeers));
 
     }
 }
@@ -117,9 +120,18 @@ class ContractEmployee extends Employee{ // implements Payment{
 }
 
 
+
 class Employee implements Payment, Comparable<Employee>{
     private String employeeId;
     private double tax;
+
+//    abstract int getSortIndex();
+static class CalculatePayComparator implements Comparator<Employee>{
+    @Override
+    public int compare(Employee emp1, Employee emp2) {
+        return -1*Double.compare(emp1.calculatePay(), emp2.calculatePay());
+    }
+}
 
     @Override
     public int compareTo(Employee obj) {
@@ -127,8 +139,12 @@ class Employee implements Payment, Comparable<Employee>{
         int result = name.compareTo(obj.name);
         return result == 0 ? Integer.compare(this.id, obj.id) : result;
 */
-        return -1*Double.compare(this.calculatePay(), obj.calculatePay());
+//        return -1*Double.compare(this.calculatePay(), obj.calculatePay());
+        return this.getEmployeeId().compareTo(obj.getEmployeeId());
     }
+//        import java.util.Comparator;
+
+
 
     @Override
     public double calculatePay() {
