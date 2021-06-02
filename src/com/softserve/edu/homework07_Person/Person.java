@@ -2,7 +2,7 @@ package com.softserve.edu.homework07_Person;
 
 public abstract class Person {
 	private String name;
-	private int salary;
+	private double salary;
 
 	public Person (String name) {
 		this.name=name;
@@ -10,7 +10,7 @@ public abstract class Person {
 		
 	}
 	
-	public Person(String name, int salary) {
+	public Person(String name, double salary) {
 		this.name = name;
 		this.salary = salary;
 		System.out.println("Constructr form Person class.");
@@ -31,11 +31,11 @@ public abstract class Person {
 	
 	public abstract void print();
 
-	int getSalary() {
+	double getSalary() {
 		return salary;
 	}
 
-	void setSalary(int salary) {
+	void setSalary(double salary) {
 		this.salary = salary;
 	}
 	

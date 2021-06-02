@@ -5,10 +5,10 @@ public class Main {
 		
 		Person [] people = {
 				new Student("Tom"),
-				new Cleaner("Jon", 2345),
-				new Teacher ("Mike", 4323),
-				new Cleaner ("Don", 2355),
-				new Teacher ("Shaun", 4623),
+				new Cleaner("Jon", 2345.13),
+				new Teacher ("Mike", 4323.93),
+				new Cleaner ("Don", 2355.43),
+				new Teacher ("Shaun", 4623.98),
 				new Student ("Ross")
 		};
 		
@@ -19,6 +19,8 @@ public class Main {
 				System.out.println("\t\t" + ((Staff) person).getSalary());
 			}
 		}
+		
+		
 	}
 
 }

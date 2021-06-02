@@ -3,7 +3,7 @@ package com.softserve.edu.homework07_Person;
 public abstract class Staff extends Person{
 	
 	
-	public Staff(String name, int salary) {
+	public Staff(String name, double salary) {
 		super (name, salary);
 		System.out.println("Constructr form Staff class.");
 	}

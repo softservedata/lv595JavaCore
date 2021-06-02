@@ -4,7 +4,7 @@ public class Teacher extends Staff {
 	
 	private final String TYPE_PERSON = "Teacher";
 	
-	public Teacher(String name, int salary) {
+	public Teacher(String name, double salary) {
 		super(name, salary);
 		System.out.println("Constructr form Teacher class.");
 	}
