@@ -18,7 +18,7 @@ public class Employee implements Payment, Comparable<Employee> {
     }
 
     @Override
-    public double calculatePay() {
+    public int calculatePay() {
         return 0;
     }
 
@@ -38,6 +38,6 @@ public class Employee implements Payment, Comparable<Employee> {
     @Override
     public int compareTo(Employee o) {
 
-        return 0;
+        return calculatePay() - o.calculatePay();
     }
 }

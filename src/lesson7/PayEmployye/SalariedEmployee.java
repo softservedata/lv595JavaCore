@@ -1,10 +1,10 @@
 package lesson7.PayEmployye;
 
 public class SalariedEmployee extends Employee implements Payment {
-    private double salar;
+    private int salar;
     private String socialSecurityNumber;
 
-    public SalariedEmployee(String employeeld, double salar, String socialSecurityNumber) {
+    public SalariedEmployee(String employeeld, int salar, String socialSecurityNumber) {
         super(employeeld);
         this.salar = salar;
         this.socialSecurityNumber = socialSecurityNumber;
@@ -12,7 +12,7 @@ public class SalariedEmployee extends Employee implements Payment {
 
 
     @Override
-    public double calculatePay() {
+    public int calculatePay() {
         return salar;
     }
 
