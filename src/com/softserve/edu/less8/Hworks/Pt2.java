@@ -2,14 +2,14 @@ package com.softserve.edu.less8.Hworks;
 
 public class Pt2 {
     public static void main(String[] args) {
-       WrapperShape squareWrapper = new WrapperShape(new Square());
+/*       WrapperShape squareWrapper = new WrapperShape(new Square());
         System.out.println("Square has a " + (squareWrapper.numOfVertex()));
         WrapperShape circleWrapper = new WrapperShape(new Circle(12.5));
         System.out.println("Circle has a " + (circleWrapper.numOfVertex()));
-//        WrapperShape helloWrapper = new WrapperShape("Hello!!");
+//        WrapperShape helloWrapper = new WrapperShape("Hello!!");  */
     }
 }
-
+/*
 class WrapperShape<T>{
     private Shape figure;
 
@@ -22,11 +22,11 @@ class WrapperShape<T>{
         figure = new Circle(argFigure.getRadius());
 //        this.figure = figure;
     }
-/*
+
     public String numOfVertex() {
     return "";
     }
-*/
+
 //    @Override
     public int numOfVertex(){
         return  figure.numOfVertex();
@@ -70,3 +70,5 @@ class Square implements Shape{
 interface Shape{
     public int numOfVertex();
 }
+
+ */

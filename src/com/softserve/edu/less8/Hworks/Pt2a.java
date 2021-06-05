@@ -2,25 +2,27 @@ package com.softserve.edu.less8.Hworks;
 
 public class Pt2a {
     public static void main(String[] args) {
-       WrapperShape squareWrapper = new WrapperShape(new Square());
+       Vrapper<Shape> squareWrapper = new Vrapper<>(new Square());
         System.out.println("Square has a " + (squareWrapper.numOfVertex()));
-        WrapperShape circleWrapper = new WrapperShape(new Circle(12.5));
+        Vrapper<Shape> circleWrapper = new Vrapper<>(new Circle(12.5));
         System.out.println("Circle has a " + (circleWrapper.numOfVertex()));
-//        WrapperShape helloWrapper = new WrapperShape("Hello!!");
+        Vrapper<String> stringWrapper = new Vrapper<>("Hello!!");
     }
 }
 
-class Wrapper<Shape>{
-    private Shape figure;
+class Vrapper<Shape>{
+    private Object figure;
 
-    public Wrapper<Shape>(Square argFigure) {
+    public Vrapper(Square argFigure) {
         figure = new Square();
-//        this.figure = figure;
+//        Square figure = new Square();
+//        this.figure = (Shape) figure;
     }
 
-    public Wrapper<Shape>(Circle argFigure) {
+    public Vrapper(Circle argFigure) {
         figure = new Circle(argFigure.getRadius());
-//        this.figure = figure;
+//        Circle figure = new Circle(argFigure.getRadius());
+//        this.figure = (Shape) figure;
     }
 /*
     public String numOfVertex() {
@@ -29,12 +31,16 @@ class Wrapper<Shape>{
 */
 //    @Override
     public int numOfVertex(){
-        return  figure.numOfVertex();
+        if(figure instanceof Square)
+           return  ((Square) figure).numOfVertex();
+        if(figure instanceof Circle)
+            return  ((Circle) figure).numOfVertex();
+        return -1;
     }
 }
 
 ////////////////////////////////////////////
-/*
+
 class Circle implements Shape{
     private double radius;
 
@@ -71,4 +77,3 @@ interface Shape{
     public int numOfVertex();
 }
 
- */
