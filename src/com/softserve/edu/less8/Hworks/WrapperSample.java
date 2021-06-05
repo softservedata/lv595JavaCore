@@ -3,26 +3,27 @@ package com.softserve.edu.less8.Hworks;
 public class WrapperSample {
     public static void main(String[ ] args) {
 
-        String text = "Hello World";
-//        int text = 123;
+//       String text = "Hello World";
+        int text = 123;
         Box box = new Box();
         box.set(text);
 //        String i =  (String) box.get();
-        Integer i = (Integer) box.get();
+        int i =  (int) box.get();
 //        System.out.println("I = " + i);
 //        System.out.println("I = " + i);
-
+        System.out.println("text = " +text + ", after = " + i);
 
 
         String textJ = "Hello World";
         WrapperBox boxExternal = new WrapperBox();
         boxExternal.set(textJ);
         Integer j;
-//        j = (Integer) boxExternal.get();
+//        j =  (Integer) boxExternal.get();
 
         VrapperBox test = new VrapperBox();
         test.set(textJ);
-        j = test.get(true);
+//        j = (int) test.get("123");
+//        System.out.println("Vrapper\n\t textJ = " +textJ + ", j = " + j);
 
     }
 }

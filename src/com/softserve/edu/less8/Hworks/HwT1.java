@@ -40,24 +40,43 @@ class Student extends Person{
 
 
 //----------------------------------------------------------------
-abstract class Person{
-    private FullName fullName;// = new FullName();
+abstract class Person implements Cloneable{
+    public FullName fullName;// = new FullName();
     private int age;
 
-    public Person(FullName fullName, int age){
-        this.fullName = new FullName(fullName.getFirstName(), fullName.getLastName());
-    this.age = age;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String info(){
+    public Person(FullName fullName, int age) {
+        this.fullName = new FullName(fullName.getFirstName(), fullName.getLastName());
+        this.age = age;
+    }
+
+    public String info() {
         return "First name: <" + fullName.getFirstName() +
-        ">, Last name: <" +fullName.getLastName() +
-                ">, Age: <"+ age + ">";
+                ">, Last name: <" + fullName.getLastName() +
+                ">, Age: <" + age + ">";
     }
 
     public abstract String activity();
-}
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName=" + fullName +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Person tempPerson = (Person) super.clone();
+        tempPerson.fullName = (FullName) tempPerson.fullName.clone();
+        return tempPerson;
+
+    }
+}
 
 
 
@@ -106,6 +125,11 @@ class FullName {
         if (!(o instanceof FullName)) return false;
         FullName fullName = (FullName) o;
         return getFirstName().equals(fullName.getFirstName()) && getLastName().equals(fullName.getLastName());
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
