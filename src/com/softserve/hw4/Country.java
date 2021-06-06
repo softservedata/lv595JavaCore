@@ -40,12 +40,14 @@ public class Country {
 		for (int i = 0; i < Africa.length; i++) {
 			if (Africa[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 				c2 = "Africa";
+				break;
 			}
 		}
 		if (c2 == "null") {
 			for (int i = 0; i < Asia.length; i++) {
 				if (Asia[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 					c2 = "Asia";
+					break;
 				}
 			}
 		}
@@ -53,6 +55,7 @@ public class Country {
 			for (int i = 0; i < Europe.length; i++) {
 				if (Europe[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 					c2 = "Europe";
+					break;
 				}
 			}
 		}
@@ -60,6 +63,7 @@ public class Country {
 			for (int i = 0; i < NorthAmerica.length; i++) {
 				if (NorthAmerica[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 					c2 = "NorthAmerica";
+					break;
 				}
 			}
 		}
@@ -67,6 +71,7 @@ public class Country {
 			for (int i = 0; i < SouthAmerica.length; i++) {
 				if (SouthAmerica[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 					c2 = "SouthAmerica";
+					break;
 				}
 			}
 		}
@@ -74,6 +79,7 @@ public class Country {
 			for (int i = 0; i < Oceania.length; i++) {
 				if (Oceania[i].toLowerCase().contentEquals(c1.toLowerCase())) {
 					c2 = "Oceania";
+					break;
 				}
 			}
 		}
