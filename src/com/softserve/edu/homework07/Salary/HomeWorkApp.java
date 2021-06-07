@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.softserve.edu.homework07.Salary.Animal.Animal.AgeComparator;
+import com.softserve.edu.homework07.Animal.Animal.AgeComparator;
 import com.softserve.edu.homework07.Salary.Employee.IDAscendComparator;
 
 public class HomeWorkApp {
