@@ -1,9 +1,15 @@
 package com.softserve.edu11box;
 
-//import java.io.Serializable;
+import java.io.Serializable;
 
-public class BoxGen<T> { // BoxGen<T extends Serializable> {
+public class BoxGen<T> {
+//public class BoxGen<T extends Serializable> {
+	// private static T obj; // Error
 	private T obj;
+	
+//	public BoxGen() {
+//		obj = new T(); // Error
+//	}
 
 	public T get() {
 		return obj;
