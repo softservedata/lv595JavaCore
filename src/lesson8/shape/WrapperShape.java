@@ -1,7 +1,7 @@
 package lesson8.shape;
 
 public class WrapperShape<Shape> {
-    private Square ob = new Square();
+    private Square  ob = new Square();
     private Circle ob2 = new Circle();
 
     public Square getOb() {
