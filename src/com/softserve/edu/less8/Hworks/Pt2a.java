@@ -3,15 +3,17 @@ package com.softserve.edu.less8.Hworks;
 public class Pt2a {
     public static void main(String[] args) {
        Vrapper<Shape> squareWrapper = new Vrapper<>(new Square());
-        System.out.println("Square has a " + (squareWrapper.numOfVertex()));
+        System.out.println("squareWrapper - " + squareWrapper.info() +
+                " and has a " +  squareWrapper.numOfVertex());
         Vrapper<Shape> circleWrapper = new Vrapper<>(new Circle(12.5));
-        System.out.println("Circle has a " + (circleWrapper.numOfVertex()));
-        Vrapper<String> stringWrapper = new Vrapper<>("Hello!!");
+        System.out.println("circleWrapper - " + circleWrapper.info()
+                + " and has a "  +  circleWrapper.numOfVertex());
+//        Vrapper<String> stringWrapper = new Vrapper<>("Hello!!");
     }
 }
 
-class Vrapper<Shape>{
-    private Object figure;
+class Vrapper<T>{
+    private Shape figure;
 
     public Vrapper(Square argFigure) {
         figure = new Square();
@@ -29,13 +31,32 @@ class Vrapper<Shape>{
     return "";
     }
 */
-//    @Override
+//
+   // @Override
     public int numOfVertex(){
+/*
         if(figure instanceof Square)
            return  ((Square) figure).numOfVertex();
         if(figure instanceof Circle)
             return  ((Circle) figure).numOfVertex();
         return -1;
+*/
+        return figure.numOfVertex();
+    }
+
+    public String info() {//} throws ClassNotFoundException {
+/*        switch (figure.getClass().getSimpleName()) { //((figure.getClass()).toString()) {
+            case "Square" :
+                return ((Square) figure).info();
+//                break;
+            case "Circle" :
+                return ((Circle) figure).info();
+//                break;
+            default: return "Unknown class!!!";//figure.getClass().getEnclosingClass().toString(); //.getSimpleName().getName();
+        }
+*/
+        return   figure.info();
+
     }
 }
 
@@ -50,7 +71,11 @@ class Circle implements Shape{
 
     public Circle(double radius) {
         this.radius = radius;
-        System.out.println("It's a circle!");
+    }
+
+    @Override
+    public String info() {
+        return Shape.super.info() + " - Circle!";
     }
 
     @Override
@@ -62,7 +87,11 @@ class Circle implements Shape{
 /////////////////////////////////////////1
 class Square implements Shape{
     public Square() {
-        System.out.println("It's a square");
+    }
+
+    @Override
+    public String info() {
+        return Shape.super.info() + " - Square!";
     }
 
     @Override
@@ -75,5 +104,9 @@ class Square implements Shape{
 ///////////////////////////////////
 interface Shape{
     public int numOfVertex();
+    default public String info()
+    {
+        return "It's a Shape.";
+    }
 }
 

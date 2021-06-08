@@ -18,11 +18,11 @@ public class WrapperSample {
         WrapperBox boxExternal = new WrapperBox();
         boxExternal.set(textJ);
         Integer j;
-//        j =  (Integer) boxExternal.get();
+//        j = (Integer)  boxExternal.get();
 
         VrapperBox test = new VrapperBox();
         test.set(textJ);
-//        j = (int) test.get("123");
+//        j = (Integer) test.get("123");
 //        System.out.println("Vrapper\n\t textJ = " +textJ + ", j = " + j);
 
     }

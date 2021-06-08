@@ -40,12 +40,24 @@ class Student extends Person{
 
 
 //----------------------------------------------------------------
-abstract class Person implements Cloneable{
-    public FullName fullName;// = new FullName();
+abstract class Person{ // implements Cloneable{
+    private FullName fullName;// = new FullName();
     private int age;
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setFullName(FullName fullName) {
+        this.fullName = fullName;
+    }
+
+    public FullName getFullName() {
+        return fullName;
     }
 
     public Person(FullName fullName, int age) {
@@ -68,20 +80,20 @@ abstract class Person implements Cloneable{
                 ", age=" + age +
                 '}';
     }
-
+/*
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Person tempPerson = (Person) super.clone();
         tempPerson.fullName = (FullName) tempPerson.fullName.clone();
         return tempPerson;
 
-    }
+    }*/
 }
 
 
 
 //----------------------------------------------------------------
-class FullName {
+class FullName { //implements Cloneable{
     private String firstName;
     private String lastName;
 
@@ -126,12 +138,12 @@ class FullName {
         FullName fullName = (FullName) o;
         return getFirstName().equals(fullName.getFirstName()) && getLastName().equals(fullName.getLastName());
     }
-
+/*
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-
+*/
     @Override
     public int hashCode() {
         return Objects.hash(getFirstName(), getLastName());
