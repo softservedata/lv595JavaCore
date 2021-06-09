@@ -21,7 +21,8 @@ public class ApplPerson {
 		IPerson p = Person.get()
 				.setFirstName("fN")
 				.setLastName("ln")
-				.setLogin("log")
+				.setLogin2("login")
+				//.setLogin("log")
 				.setEmail("em")
 				.setAddress("address")
 				.build();

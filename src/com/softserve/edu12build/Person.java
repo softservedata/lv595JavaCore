@@ -10,6 +10,7 @@ interface ILastName {
 
 interface ILogin {
 	IEmail setLogin(String login);
+	IEmail setLogin2(String login);
 }
 
 interface IEmail {
@@ -70,10 +71,18 @@ public class Person implements IFirstName, ILastName, ILogin,
 	}
 
 	public IEmail setLogin(String login) {
+		// Check login, throw CustomException if error
 		this.login = login;
 		return this;
 	}
 
+	public IEmail setLogin2(String login) {
+		// Check login, throw CustomException if error
+		this.login = login;
+		return this;
+	}
+
+	
 	public IAddress setEmail(String email) {
 		this.email = email;
 		return this;
