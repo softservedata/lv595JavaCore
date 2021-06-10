@@ -1,12 +1,10 @@
 package com.softserve.edu.less8.Hworks;
 
-import sun.util.resources.LocaleData;
-
 import java.time.LocalDate;
 
 public class Pt1 {
     public static void main(String[] args) {
-     Car car = (Car) Car.getCar().setModel("Tour")
+     Car car =  Car.getCar().setModel("Tour")
              .setDateOfProduce(LocalDate.now())
              .setEngineCapacity(1.6)
              .setColor("snowWhite")
@@ -127,10 +125,13 @@ class Car {
             return this;
         }
 
-        public Object build(){
+        public Car build(){
             Boolean result = false;
-            return result;
-//            return (Car) Car.this;
+            String test = "";
+            test.isEmpty();
+//            if (Car.this.model.isEmpty())
+//            return this;//new Student("Vanja", 0, 0);
+            return Car.this;
         }
     }
 }

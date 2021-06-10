@@ -4,6 +4,7 @@ package com.softserve.edu.less2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 
 public class Student {
@@ -87,7 +88,7 @@ public class Student {
     }
 
     public String toString(){
-        return name + rating;
+        return name + ", " +rating;
     }
 
     public Student(){
@@ -111,9 +112,18 @@ public class Student {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return Double.compare(student.getRating(), getRating()) == 0 && Objects.equals(getName(), student.getName());
+    }
 
-
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getRating());
+    }
 }
 
 /*
