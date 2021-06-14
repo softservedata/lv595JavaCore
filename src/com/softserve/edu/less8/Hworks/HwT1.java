@@ -2,7 +2,11 @@ package com.softserve.edu.less8.Hworks;
 
 //import com.softserve.edu.less2.Person;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
+import java.util.Comparator;
+
 
 public class HwT1 {
 
@@ -20,24 +24,6 @@ public class HwT1 {
 
 
 //----------------------------------------------------------------
-class Student extends Person{
-   private int course;
-
-    public Student(FullName fullName, int age, int course) {
-        super(fullName, age);
-        this.course = course;
-    }
-
-    @Override
-    public String info(){
-        return super.info() + " has " + course + "courses.";
-    }
-
-    public String activity(){
-        return "I study at university";
-    }
-}
-
 
 //----------------------------------------------------------------
 abstract class Person{ // implements Cloneable{
@@ -93,59 +79,3 @@ abstract class Person{ // implements Cloneable{
 
 
 //----------------------------------------------------------------
-class FullName { //implements Cloneable{
-    private String firstName;
-    private String lastName;
-
-    public FullName(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public FullName() {
-        firstName = "";
-        lastName = "";
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    @Override
-    public String toString() {
-        return "FullName{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof FullName)) return false;
-        FullName fullName = (FullName) o;
-        return getFirstName().equals(fullName.getFirstName()) && getLastName().equals(fullName.getLastName());
-    }
-/*
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-*/
-    @Override
-    public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName());
-    }
-}
