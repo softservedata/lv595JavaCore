@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-
+/*
 interface MapVas<K,V> extends Map<K,V>{
     abstract public K getKey(String value);
 
@@ -36,7 +36,7 @@ class HashMapVas<K,V> extends HashMap<K,V> implements MapVas<K,V>{
         super(m);
     }
 }
-
+*/
 public class Pt2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
