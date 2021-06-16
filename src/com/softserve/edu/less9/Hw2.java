@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Hw2 {
     public static void main(String[] args) throws IOException {
-        MapVas<String, String> personMap = new HashMapVas<>();
+        MapVas<String, String> personMap = new HashMapVas <>();
         personMap.put("LN1","Olena");
         personMap.put("LN2","Orest");
         personMap.put("LN3","Igor");
