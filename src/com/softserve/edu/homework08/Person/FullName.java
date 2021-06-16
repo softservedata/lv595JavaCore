@@ -1,4 +1,4 @@
-package com.softserve.edu.homework09.Person;
+package com.softserve.edu.homework08.Person;
 
 public class FullName implements Cloneable{
 	

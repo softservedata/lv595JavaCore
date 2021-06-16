@@ -8,49 +8,24 @@ import java.util.List;
 public class AppCars {
 	public static void main(String[] args) {
 
-		Car.CarBuilder car1 = Car.CarBuilder.getCar();
-		car1.addColor("Red");
-		car1.addDateOfProduction(LocalDate.now());
-		car1.addEngineCapasity(2.92);
-		car1.addModel("BMW");
-		car1.addPassengerCapasity(2);
-		car1.setisAirConditioning(true);
+		Car.CarBuilder car1 = Car.CarBuilder.buildCar().addColor("Red").addDateOfProduction(LocalDate.now())
+				.addEngineCapasity(2.92).addModel("BMW").addPassengerCapasity(2).setisAirConditioning(true);
 		System.out.println(car1);
 
-		Car.CarBuilder car2 = Car.CarBuilder.getCar();
-		car2.addColor("Blue");
-		car2.addDateOfProduction(LocalDate.now());
-		car2.addEngineCapasity(3.01);
-		car2.addModel("VW");
-		car2.addPassengerCapasity(4);
-		car2.setisAirConditioning(false);
+		Car.CarBuilder car2 = Car.CarBuilder.buildCar().addColor("Blue").addDateOfProduction(LocalDate.now())
+				.addEngineCapasity(3.01).addModel("VW").addPassengerCapasity(4).setisAirConditioning(false);
 		System.out.println(car2);
 
-		Car.CarBuilder car3 = Car.CarBuilder.getCar();
-		car3.addColor("Yellow");
-		car3.addDateOfProduction(LocalDate.now());
-		car3.addEngineCapasity(1.98);
-		car3.addModel("VW");
-		car3.addPassengerCapasity(5);
-		car3.setisAirConditioning(true);
+		Car.CarBuilder car3 = Car.CarBuilder.buildCar().addColor("Yellow").addDateOfProduction(LocalDate.now())
+				.addEngineCapasity(1.98).addModel("VW").addPassengerCapasity(5).setisAirConditioning(true);
 		System.out.println(car3);
 
-		Car.CarBuilder car4 = Car.CarBuilder.getCar();
-		car4.addColor("White");
-		car4.addDateOfProduction(LocalDate.now());
-		car4.addEngineCapasity(3.45);
-		car4.addModel("Kia");
-		car4.addPassengerCapasity(6);
-		car4.setisAirConditioning(true);
+		Car.CarBuilder car4 = Car.CarBuilder.buildCar().addColor("White").addDateOfProduction(LocalDate.now())
+				.addEngineCapasity(3.45).addModel("Kia").addPassengerCapasity(6).setisAirConditioning(true);
 		System.out.println(car4);
 
-		Car.CarBuilder car5 = Car.CarBuilder.getCar();
-		car5.addColor("Grey");
-		car5.addDateOfProduction(LocalDate.now());
-		car5.addEngineCapasity(3.75);
-		car5.addModel("Mersedes");
-		car5.addPassengerCapasity(2);
-		car5.setisAirConditioning(false);
+		Car.CarBuilder car5 = Car.CarBuilder.buildCar().addColor("Grey").addDateOfProduction(LocalDate.now())
+				.addEngineCapasity(3.75).addModel("Mersedes").addPassengerCapasity(2).setisAirConditioning(false);
 		System.out.println(car5);
 
 		List<Car> cars = new ArrayList<>();
@@ -81,7 +56,7 @@ public class AppCars {
 
 		System.out.println("\n\tPrinting sorted\n");
 		for (Car car : cars) {
-			System.out.println("Printing sorted: " + car);
+			System.out.println("Sorted cars: " + car);
 		}
 	}
 }

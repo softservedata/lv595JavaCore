@@ -11,7 +11,8 @@ public class Car {
 	private int passengerCapasity;
 	private boolean isAirConditioning;
 
-	Car() {
+	private Car() {
+
 	}
 	
 	
@@ -24,10 +25,10 @@ public class Car {
 	
 	public static class CarBuilder extends Car {
 
-		CarBuilder() {
+		private CarBuilder() {
 		}
 		
-		public static CarBuilder getCar() {
+		public static CarBuilder buildCar() {
 			return new CarBuilder();
 		}
 		
