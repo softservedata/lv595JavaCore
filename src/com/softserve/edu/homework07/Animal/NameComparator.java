@@ -1,4 +1,4 @@
-package com.softserve.edu.homework07_Animal;
+package com.softserve.edu.homework07.Animal;
 
 import java.util.Comparator;
 

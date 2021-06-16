@@ -8,6 +8,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.softserve.edu.homework04.NumbersChecker.IntChecker;
+
 public class IntCheckerTest {
 
 	@BeforeClass
