@@ -22,11 +22,11 @@ public class Hw1 {
 // /*
         SetsVas setsVas = new SetsVas();
         Set<Integer> interSet = new TreeSet<>();
-          interSet = setsVas.<Integer>interSets(set1,set2);
+          interSet = setsVas.interSets(set1,set2);
         System.out.println("An intersections of sets: " + interSet);
 // */
         Set<Integer> unionSet = new TreeSet<>();
-        unionSet = setsVas.<Integer>unionSets(set1,set2);
+        unionSet = setsVas.unionSets(set1,set2);
         System.out.println("An union of sets: " + unionSet);
 
 
