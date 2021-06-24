@@ -1,5 +1,6 @@
 package com.softserve.edu13set;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -67,5 +68,6 @@ public class FindDups {
 		//s.sort(new Employee.ByNameAndId());
 		System.out.println("Sorted Elements: " + s);
 		*/
+		//Set<String> s2 = new HashSet<>();
 	}
 }
