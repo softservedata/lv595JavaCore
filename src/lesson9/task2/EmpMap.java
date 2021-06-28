@@ -1,12 +1,14 @@
 package lesson9.task2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class EmpMap {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader scanner = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, String> employeeMap = new HashMap<>();
         employeeMap.put(23, "Mark");
         employeeMap.put(32, "John");
@@ -16,7 +18,7 @@ public class EmpMap {
         employeeMap.put(25, "Ira");
         employeeMap.put(47, "Mickael");
         System.out.println("Enter ID Employee : ");
-        int scan = scanner.nextInt();
+        int scan = Integer.parseInt(scanner.readLine());
         if (employeeMap.containsKey(scan)) {
             System.out.println("Employee name is : " + employeeMap.get(scan));
         } else {
@@ -26,7 +28,7 @@ public class EmpMap {
         System.out.println("Enter employee Name : ");
 
 
-        String name = scanner.nextLine();
+        String name = scanner.readLine();
 
         for (Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
             if (employeeMap.containsValue(name)) {
@@ -38,5 +40,4 @@ public class EmpMap {
         scanner.close();
 
     }
-
 }
