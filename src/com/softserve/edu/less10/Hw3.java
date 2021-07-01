@@ -13,6 +13,7 @@ public class Hw3 {
         Matcher m;
         StringBuilder name = new StringBuilder("$0.2");
         boolean criteria;
+
         do {
             System.out.println("Enter currency : ");
             name.delete(0,name.length());
