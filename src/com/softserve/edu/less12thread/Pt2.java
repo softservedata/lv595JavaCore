@@ -61,28 +61,36 @@ class Message2 extends Thread{
         this.msg = msg;
         this.interval = interval;
         this.times = times;
-        System.out.println("Mess2 thread = " + this.getId());
+        System.out.println("Mess2 thread = " +
+                Thread.currentThread().getId());
+//                this.getId());
     }
-/*
+
     public void toJoin(Thread threadToJoin){
         toJoin.add(threadToJoin);
 
     }
-*/
 
+/*
     public void toJoin(Thread threadToJoin){
         try {
+
             threadToJoin.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("Thread " +
+//                this.getId() +
+                Thread.currentThread().getId() +
+                " joined to " +
+                threadToJoin.getId() );
 
     }
 
-
+*/
     //    @Override
     public void run()  {
-/*        for (Thread currentthread : toJoin){
+        for (Thread currentthread : toJoin){
             try {
                 currentthread.join();
             } catch (InterruptedException e) {
@@ -91,8 +99,11 @@ class Message2 extends Thread{
             System.out.println("Thread " + this.getId() + " joined to " +
                     currentthread.getId() );
         }
-*/        for (int i =0 ; i < times-1; i++){
-            System.out.println("Tread "+ this.getId() + " - "+msg);
+        for (int i =0 ; i < times-1; i++){
+            System.out.println("Tread "+
+//                    this.getId() +
+                      Thread.currentThread().getId() +
+                    " - "+msg);
             try {
                 Thread.sleep(interval);
             } catch (InterruptedException e) {
