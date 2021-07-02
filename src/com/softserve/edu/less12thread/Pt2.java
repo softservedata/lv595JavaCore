@@ -1,5 +1,8 @@
 package com.softserve.edu.less12thread;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pt2 {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("main thread = " + Thread.currentThread().getId());
@@ -53,12 +56,19 @@ class Message2 extends Thread{
     private String msg;
     private long interval;
     private int times;
+    private List<Thread> toJoin = new ArrayList<>();
     public Message2 (String msg, long interval, int times){
         this.msg = msg;
         this.interval = interval;
         this.times = times;
-        System.out.println("Mess2 thread = " + Thread.currentThread().getId());
+        System.out.println("Mess2 thread = " + this.getId());
     }
+/*
+    public void toJoin(Thread threadToJoin){
+        toJoin.add(threadToJoin);
+
+    }
+*/
 
     public void toJoin(Thread threadToJoin){
         try {
@@ -66,21 +76,29 @@ class Message2 extends Thread{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Thread " + Thread.currentThread().getId() + " joined to " +
-                threadToJoin.currentThread().getId() );
+
     }
 
 
     //    @Override
     public void run()  {
-        for (int i =0 ; i < times-1; i++){
-            System.out.println(msg);
+/*        for (Thread currentthread : toJoin){
+            try {
+                currentthread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Thread " + this.getId() + " joined to " +
+                    currentthread.getId() );
+        }
+*/        for (int i =0 ; i < times-1; i++){
+            System.out.println("Tread "+ this.getId() + " - "+msg);
             try {
                 Thread.sleep(interval);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        System.out.println(msg + " last!");
+        System.out.println("Tread "+ this.getId() + " - " +msg + " last!");
     }
 }
