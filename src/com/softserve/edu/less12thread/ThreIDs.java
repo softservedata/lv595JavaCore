@@ -26,6 +26,7 @@ public class ThreIDs {
             e.printStackTrace();
         }
         System.out.println("Threads IDs: " + notEqualsIds);
+//        threads.get(3).isAlive()
 
     }
 

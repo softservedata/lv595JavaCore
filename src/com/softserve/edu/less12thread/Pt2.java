@@ -51,7 +51,7 @@ class Message1 extends Thread{
         System.out.println(msg + " last!");
     }
 }
-*/
+
 class Message2 extends Thread{
     private String msg;
     private long interval;
@@ -71,7 +71,7 @@ class Message2 extends Thread{
 
     }
 
-/*
+
     public void toJoin(Thread threadToJoin){
         try {
 
@@ -87,7 +87,7 @@ class Message2 extends Thread{
 
     }
 
-*/
+
     //    @Override
     public void run()  {
         for (Thread currentthread : toJoin){
@@ -113,3 +113,5 @@ class Message2 extends Thread{
         System.out.println("Tread "+ this.getId() + " - " +msg + " last!");
     }
 }
+
+*/
