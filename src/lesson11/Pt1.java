@@ -12,27 +12,29 @@ public class Pt1 {
 
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter a ");
-        int a = Integer.parseInt(reader.readLine());
-        System.out.println("Enter b ");
-        int b = Integer.parseInt(reader.readLine());
-
+        int a, b;
         try {
+            System.out.println("Enter a ");
+            a = Integer.parseInt(reader.readLine());
+            System.out.println("Enter b ");
+            b = Integer.parseInt(reader.readLine());
             if (Pt1.squareRectangle(a, b) < 0)
                 throw new ArithmeticException("ArithmeticException!!! ");
+            System.out.println("Area of a rectangle " + Pt1.squareRectangle(a, b));
+        } catch (NumberFormatException | IOException e) {
+            System.out.println("Enter integer numbers!");
+            e.printStackTrace();
         } catch (ArithmeticException e) {
             System.out.println("Exception!!! A or B < 0!!");
         }
-
         try {
-            if (a != Integer.parseInt(reader.readLine()))
-                throw new NumberFormatException("NumberFormatException!!!");
-        } catch (NumberFormatException e) {
-            System.out.println("Enter Number!!! ");
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("Area of a rectangle " + Pt1.squareRectangle(a, b));
 
     }
+
 }
