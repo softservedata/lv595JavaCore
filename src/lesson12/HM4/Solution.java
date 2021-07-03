@@ -4,13 +4,12 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) {
-        FileInputStream fl = null;
         String[] array = new String[4];
         String fileName = "file1.txt";
         String s = "";
         int max = 0;
         String maximum = null;
-        try (BufferedReader reader = new BufferedReader(new FileReader("file1.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             for (int i = 0; i < array.length; i++) {
                 if ((s = reader.readLine()) != null)
                     array[i] = s;
