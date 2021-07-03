@@ -2,16 +2,16 @@ package com.softserve.edu.less12thread;
 import java.util.*;
 
 public class Message2 extends Thread{
-    private String msg;
-    private long interval;
-    private int times;
-    private List<Thread> toJoin = new ArrayList<>();
+    protected String msg;
+    protected long interval;
+    protected int times;
+    protected List<Thread> toJoin = new ArrayList<>();
 
     public Message2 (String msg, long interval, int times){
         this.msg = msg;
         this.interval = interval;
         this.times = times;
-        System.out.println("Mess2 objectId = " +
+        System.out.println(msg + " objectId = " +
 //                Thread.currentThread().getId());
                 this.getId());
     }
