@@ -16,9 +16,9 @@ public class Hw3a {
 //        two.run();
         three.setMaster(two);
         two.setMaster(one);
+        three.start();
         two.start();
         one.start();
-        three.start();
 //        two.setMaster(one);
 //        svitlofor.notify();
 /*        try {

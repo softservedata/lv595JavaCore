@@ -51,9 +51,9 @@ public class Message3 extends Message2 {
         }
 */
         if (master == null)
-            System.out.println("Here is no master for " + Thread.currentThread().getId());
+            System.out.println("Here is no master for " + msg + Thread.currentThread().getId());
         else
-            System.out.println(master.getId() + " is master for " + Thread.currentThread().getId());
+            System.out.println(master.getId() + " is master for " +msg+ Thread.currentThread().getId());
 /*        while (!finish) {
             synchronized (svitlofor) {
                 System.out.println(msg + " is working");
@@ -73,13 +73,13 @@ public class Message3 extends Message2 {
             }
         }
 */
-        while (!finish) {
+//        while (!finish) {
             while (master != null && !master.isFinish()) {
-                System.out.println(msg + " notifyAll");
+                System.out.println(msg + " sleeping.");
 //                svitlofor.notify();
 //                Thread.yield();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -102,6 +102,6 @@ public class Message3 extends Message2 {
                 //             } else {
                 //           }
 
-            }
+//            }
     }
 }
