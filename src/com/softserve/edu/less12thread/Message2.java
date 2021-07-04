@@ -16,6 +16,30 @@ public class Message2 extends Thread{
                 this.getId());
     }
 
+    public java.lang.String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(java.lang.String msg) {
+        this.msg = msg;
+    }
+
+    public long getInterval() {
+        return interval;
+    }
+
+    public void setInterval(long interval) {
+        this.interval = interval;
+    }
+
+    public int getTimes() {
+        return times;
+    }
+
+    public void setTimes(int times) {
+        this.times = times;
+    }
+
     public void toJoin(Thread threadToJoin){
         toJoin.add(threadToJoin);
 
