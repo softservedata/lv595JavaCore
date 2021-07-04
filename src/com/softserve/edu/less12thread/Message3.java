@@ -73,35 +73,32 @@ public class Message3 extends Message2 {
             }
         }
 */
-//        while (!finish) {
             while (master != null && !master.isFinish()) {
                 System.out.println(msg + " sleeping.");
 //                svitlofor.notify();
 //                Thread.yield();
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(100);//super.interval);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
             System.out.println(msg + " is working");
-        synchronized (svitlofor) {
+//        synchronized (svitlofor) {
 //               if () {
                     for (int i = 0; i < times - 1; i++) {
                         System.out.println("Tread " +
                                 Thread.currentThread().getId() +
                                 " - " + msg);
+                        try {
+                            Thread.sleep(super.interval);//super.interval);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                     System.out.println("Tread " + this.getId() + " - " + msg + " last!");
                     finish = true;
-            svitlofor.notify();
-                }
-
-//                Thread.yield();
-//            Thread.yield();
-                //             } else {
-                //           }
-
-//            }
+//            svitlofor.notify();
+//                }
     }
 }

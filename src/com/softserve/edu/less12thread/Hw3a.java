@@ -6,9 +6,9 @@ public class Hw3a {
         Object svitlofor = new Object();
 
 
-        Message3 one = new Message3("Thread number one", 1000l, 1, svitlofor);
-        Message3 two = new Message3("Thread number two", 1000l, 3, svitlofor);
-        Message3 three = new Message3("Thread number three", 1000l, 5, svitlofor);
+        Message3 one = new Message3("Thread number one", 100, 30, svitlofor);
+        Message3 two = new Message3("Thread number two", 100, 20, svitlofor);
+        Message3 three = new Message3("Thread number three", 100, 10, svitlofor);
 
 
 //        two.toJoin(one);
