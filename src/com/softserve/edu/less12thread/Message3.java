@@ -73,7 +73,7 @@ public class Message3 extends Message2 {
             }
         }
 */
-            if (master != null && !master.isFinish()) {
+            while (master != null && !master.isFinish()) {
                 System.out.println(msg + " sleeping.");
 //                svitlofor.notify();
 //                Thread.yield();
@@ -83,9 +83,11 @@ public class Message3 extends Message2 {
                     e.printStackTrace();
                 }
             }
-            System.out.println(msg + " is working");
+//            System.out.println(msg + " is working");
         synchronized (svitlofor) {
 //               if () {
+            System.out.println(msg + " is working");
+            finish = true;
                     for (int i = 0; i < times - 1; i++) {
                         System.out.println("Tread " +
                                 Thread.currentThread().getId() +
@@ -97,7 +99,7 @@ public class Message3 extends Message2 {
                         }
                     }
                     System.out.println("Tread " + this.getId() + " - " + msg + " last!");
-                    finish = true;
+//                    finish = true;
             svitlofor.notify();
                 }
     }
