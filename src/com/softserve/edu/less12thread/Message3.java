@@ -78,7 +78,7 @@ public class Message3 extends Message2 {
 //                svitlofor.notify();
 //                Thread.yield();
                 try {
-                    Thread.sleep((long) (master.getInterval()*master.getTimes()*0.3));//super.interval);
+                    Thread.sleep((long) (master.getInterval()*master.getTimes()*0.6));//super.interval);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
