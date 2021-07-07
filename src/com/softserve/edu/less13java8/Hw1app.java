@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class Hw3app {
+public class Hw1app {
     public static void main(String[] args) {
-        Hw3 hw3 = new Hw3();
-        hw3.run();
+        Hw1 hw1 = new Hw1();
+        hw1.run();
 
     }
 }
 
-class Hw3{
+class Hw1{
     void run(){
         List<String> list1 = Arrays.asList(new String[] {"Olya", "Nazar", "Ira", "Dmytro", "Natalya", "Oleg", "Paraskeva", "Jura"});
 //        List<String> list1 = new ArrayList<>(Arrays.asList(new String[] {"Olya", "Nazar", "Ira", "Dmytro", "Natalya", "Oleg", "Paraskeva", "Jura"}));
