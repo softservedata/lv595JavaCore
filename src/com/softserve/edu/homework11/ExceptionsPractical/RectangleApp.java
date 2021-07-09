@@ -27,16 +27,15 @@ class Rectangle {
 
 public class RectangleApp {
 	public static void main(String[] args) {
-		try (BufferedReader br = new BufferedReader (new InputStreamReader(System.in))){
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			System.out.println("Enter First Number: ");
 			int a = Integer.parseInt(br.readLine());
 			System.out.println("Enter Second Number: ");
 			int b = Integer.parseInt(br.readLine());
-			System.out.println("Square Rectangele equals: " + Rectangle.squareRectangle(a, b));
-		}
-		catch (MyException e) {
+			System.out.println("Square Rectangle equals: " + Rectangle.squareRectangle(a, b));
+		} catch (NumberFormatException | IOException e) {
 			e.printStackTrace();
-		}catch (IOException e) {
+		} catch (MyException e) {
 			e.printStackTrace();
 		}
 
