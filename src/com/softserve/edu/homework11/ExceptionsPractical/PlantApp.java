@@ -93,9 +93,9 @@ public class PlantApp {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			boolean repeat = true;
 			while (repeat) {
-				System.out.println("Enter plant type: ");
+				System.out.println("Enter plant type: tulip, lilie, rose or orchid.");
 				String type = br.readLine();
-				System.out.println("Enter plant color: ");
+				System.out.println("Enter plant color: blue, white or red.");
 				String color = br.readLine();
 				System.out.println("Enter plant size: ");
 				int size = Integer.parseInt(br.readLine());
