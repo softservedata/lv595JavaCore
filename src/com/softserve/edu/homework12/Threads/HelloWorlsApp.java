@@ -1,4 +1,4 @@
-package com.softserve.edu.homework12.IOStreams.Threads;
+package com.softserve.edu.homework12.Threads;
 
 public class HelloWorlsApp {
 	
