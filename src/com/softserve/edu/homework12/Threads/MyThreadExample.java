@@ -14,6 +14,10 @@ public class MyThreadExample extends Thread{
 		this.sleepTime=(sleepTime*1000);
 	}
 	
+	public MyThreadExample (String message) {
+		this.message=message;
+	}
+	
 	@Override
 	public void run() {
 		for (int i = 0; i<5;i++) {
