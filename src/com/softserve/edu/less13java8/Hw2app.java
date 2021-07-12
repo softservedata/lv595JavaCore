@@ -88,14 +88,13 @@ class Hw2{
 
         test = encrypt(new ToEncrypt(test,4));
         System.out.println("test encrypted: " + test);
+        test = encrypt(new ToEncrypt(test,-4));
+        System.out.println("test decrypted: " + test);
+
         System.out.println("Origin list: " + list1);
         list1.replaceAll(x -> encrypt(new ToEncrypt(x,4)));
-
-
         System.out.println("Encrypted list: " + list1);
-
 //        list1.replaceAll(x -> encrypt(new ToEncrypt(x,-4)));
-
         list1.replaceAll(x -> decrypt.apply(new ToEncrypt(x,4)));
         System.out.println("Decrypted list: " + list1);
 
