@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Hm2 {
-    @org.jetbrains.annotations.NotNull
+
     public static char[] encrypt(String s, int n) {
 
         char[] enc = new char[s.length()];
