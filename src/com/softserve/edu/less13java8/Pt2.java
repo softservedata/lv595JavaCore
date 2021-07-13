@@ -18,6 +18,11 @@ public class Pt2 {
         String wantedDayOfWeek;
         int wantedDayOfWeekNumber = 0;
         int wantedMonthOfYearNumber = 0;
+        DayOfWeek dw = ldt.getDayOfWeek();
+
+        System.out.println("Today is " + ldt
+                + " week'sday " + dw
+                +", number - " + dw.getValue());//ldt.getDayOfWeek());
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -65,12 +70,9 @@ public class Pt2 {
 
         System.out.println("Month number :" + wantedMonthOfYearNumber);
 
-        DayOfWeek dw = ldt.getDayOfWeek();
+         dw = ldt.getDayOfWeek();
 
-/*        System.out.println("Today is " + ldt
-                + " week'sday " + dw
-                +", number - " + dw.getValue());//ldt.getDayOfWeek());
-*/        fmnum = dw.getValue();
+       fmnum = dw.getValue();
         fmnum = (wantedDayOfWeekNumber-fmnum+7) %7 +1;
 
         System.out.println("The date of first "+wantedDayOfWeek+" of "
