@@ -4,13 +4,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class Square implements Shape {
-	private static int counter=1;
+	private static int counter = 1;
 	private int id;
-	
+
 	public Square() {
-		id=counter;
+		id = counter;
 		counter++;
-		}
+	}
 
 	@Override
 	public void draw(Shape shape) {
@@ -33,5 +33,5 @@ public class Square implements Shape {
 	public String toString() {
 		return "\n\tSquare [ ID: " + id + "]";
 	}
-	
+
 }

@@ -11,9 +11,9 @@ public class IntChecker {
 
 	public IntChecker() {
 	}
-	
+
 	public IntChecker(int number) {
-		this.number=number;
+		this.number = number;
 		numbers[numberOfNumbers] = this.getNumber();
 		numberOfNumbers++;
 	}
@@ -38,7 +38,6 @@ public class IntChecker {
 		}
 		return max;
 	}
-	
 
 	public int getMin() {
 		min = this.number;
@@ -57,8 +56,8 @@ public class IntChecker {
 	public void printMin() {
 		System.out.println("Minimum integer value  = " + getMin());
 	}
-	
+
 	public void resetCounter() {
-		numberOfNumbers=0;
+		numberOfNumbers = 0;
 	}
 }

@@ -9,7 +9,7 @@ public class Boat extends WaterVehicle {
 
 	public Boat(int volume, int passengers) {
 		super(passengers);
-		this.volume=volume;
+		this.volume = volume;
 	}
 
 	public int getVolume() {
@@ -30,7 +30,5 @@ public class Boat extends WaterVehicle {
 	public String toString() {
 		return super.toString() + ": Boat [Volume=" + volume + ", Passengers= " + getPassengers() + "]";
 	}
-	
-	
-	
+
 }

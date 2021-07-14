@@ -20,9 +20,9 @@ public class Dog extends Animal implements IAnimal, IJump {
 
 	@Override
 	public void jump() {
-		System.out.println("\t\t\tDog Jumping");	
+		System.out.println("\t\t\tDog Jumping");
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Dog " + super.toString();

@@ -4,15 +4,14 @@ public enum ContinentEnum {
 	Asia("Japan", "China", "India", "Mongolia", "Pakistan", "Saudi Arabia"),
 	Africa("Algeria", "Botswana", "Cameroon", "Ethiopia", "Kenya"),
 	NorthAmerica("Canada", "Costa Rica", "Guatemala", "United States"),
-	SouthAmerica("Argentina", "Brazil", "Colombia "),
-	Europe("Ukraine", "United Kingdom", "Portugal", "Spain", "Italy"),
+	SouthAmerica("Argentina", "Brazil", "Colombia "), Europe("Ukraine", "United Kingdom", "Portugal", "Spain", "Italy"),
 	Australia("Australia", "Papua", "New Guinea");
 
 	private String[] countries;
 
 	private ContinentEnum(String... countries) {
 		this.countries = countries;
-		}
+	}
 
 	public String getContinet(String country) {
 		String string = null;

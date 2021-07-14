@@ -56,15 +56,16 @@ public class App {
 		String addBonus = input.next();
 
 		if (addBonus.equals("yes") || addBonus.equals("YES")) {
-			
-			//Checking bonus amount to be applied
+
+			// Checking bonus amount to be applied
 			System.out.println("Enter bonus amount (percents) for each employee.");
-			
+
 			// Calculating total salary with bonuses
-			Employee.setTotSum(employee0.getBonuses(input.nextInt()) + employee1.getBonuses(input.nextInt()) + employee2.getBonuses(input.nextInt()));
+			Employee.setTotSum(employee0.getBonuses(input.nextInt()) + employee1.getBonuses(input.nextInt())
+					+ employee2.getBonuses(input.nextInt()));
 
 		} else {
-			
+
 			System.out.println("No bonuses this time");
 
 		}
@@ -78,7 +79,7 @@ public class App {
 }
 
 class Employee {
-	
+
 	private String name;
 	private int rate;
 	private int hours;
@@ -108,9 +109,9 @@ class Employee {
 		this.hours = hours;
 	}
 
-	/*static float getTotSum() {
-		return totSum;
-	}*/
+	/*
+	 * static float getTotSum() { return totSum; }
+	 */
 
 	static void setTotSum(float f) {
 		Employee.totSum = f;
@@ -132,7 +133,7 @@ class Employee {
 
 	int getSalary() {
 		int salary = rate * hours;
-		//System.out.println(salary);
+		// System.out.println(salary);
 		return salary;
 	}
 
@@ -148,7 +149,7 @@ class Employee {
 	}
 
 	float getBonuses(int bonus) {
-		 
-		return (getSalary() + getSalary() * bonus/100);
+
+		return (getSalary() + getSalary() * bonus / 100);
 	}
 }

@@ -35,11 +35,11 @@ public class HomeWork {
 //			System.out.println(bytes[i]);
 			if ((bytes[i] > 64) && (((byte) (bytes[i] - n)) < 65)) {
 //				System.out.println("going though 1 condition. Before:  " + bytes[i]);
-				bytes[i] = (byte) (91 - (65 - (bytes[i] -n)));
+				bytes[i] = (byte) (91 - (65 - (bytes[i] - n)));
 //				System.out.println("going though 1 condition. After:  " + bytes[i]);
 			} else if ((bytes[i] > 96) && (((byte) (bytes[i] - n)) < 97)) {
 //				System.out.println("going though 2 condition. Before:  " + bytes[i]);
-				bytes[i] = (byte) (123 - (97 - (bytes[i] -n)));
+				bytes[i] = (byte) (123 - (97 - (bytes[i] - n)));
 //				System.out.println("going though 1 condition. After:  " + bytes[i]);
 			} else {
 //				System.out.println("going though 3 condition. Before:  " + bytes[i]);
@@ -52,7 +52,7 @@ public class HomeWork {
 		return encrypted;
 	}
 
-	void dateValidator (Object date) {
+	void dateValidator(Object date) {
 		Pattern dateFormat = Pattern.compile("(([0-1]{1}[0-9]{1}).([0-3]{1}[0-9]{1}).([0-9]{2}))");
 		Matcher check = dateFormat.matcher(String.valueOf(date));
 		if (check.find()) {
@@ -60,11 +60,10 @@ public class HomeWork {
 		} else {
 			System.out.println("Check your date format: " + date);
 		}
-		
-	}
-	public static void main(String[] args) {
-		
 
+	}
+
+	public static void main(String[] args) {
 
 //		Homework 1
 		ArrayDeque<String> list1 = new ArrayDeque<String>();
@@ -104,7 +103,7 @@ public class HomeWork {
 
 		String encrypted5 = new HomeWork().encrypt("ZzAaBbCcXxWwzZ", 20);
 		new HomeWork().decrypt(encrypted5, 20);
-		
+
 //		Homework 3
 		System.out.println("\n\tPrinting Homewrok3\n");
 
@@ -113,7 +112,6 @@ public class HomeWork {
 		new HomeWork().dateValidator(newDate); // Passing date in wrong format to method - fails validation
 		format.format(newDate);
 		new HomeWork().dateValidator(format.format(newDate)); // Passing date in right format - passes validation
-		
 
 	}
 }

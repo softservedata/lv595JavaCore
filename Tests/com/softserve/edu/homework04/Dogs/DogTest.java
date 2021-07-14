@@ -7,9 +7,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.softserve.edu.homework04.Dogs.Breed;
-import com.softserve.edu.homework04.Dogs.Dog;
-
 public class DogTest {
 
 	@BeforeClass
@@ -52,7 +49,7 @@ public class DogTest {
 
 		actual2 = dog1.namesChecker();
 //		System.out.println(actual2);
-		
+
 		Assert.assertEquals(expected2, actual2);
 		dog1.resetCounter();
 	}

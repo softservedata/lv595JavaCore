@@ -7,7 +7,7 @@ public class NameComparator implements Comparator<Animal> {
 	public NameComparator() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public int compare(Animal o1, Animal o2) {
 		if (o1.getName().compareTo(o2.getName()) != 0) {
@@ -18,12 +18,11 @@ public class NameComparator implements Comparator<Animal> {
 			return o1.getPrice() - o2.getPrice();
 		}
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
-	
-	
+
 }

@@ -18,21 +18,21 @@ public class StudentMain {
 		students.add(new Student("Matt", 4444));
 		System.out.println("\n\tPrinting students of course with for loop:\n");
 		Student.printStudents(students, 1111);
-		
+
 		System.out.println("\n\tPrinting students of course with iterator:\n");
 		Student.printWithIterator(students, 4444);
-		
+
 		System.out.println("\n\tPrinting students List:\n");
 		System.out.println(students);
-		
+
 		System.out.println("\n\tSorted by Names\n");
-		Collections.sort(students, new Student.ByName ());
+		Collections.sort(students, new Student.ByName());
 		System.out.println(students);
-		
+
 		System.out.println("\n\tSorted by Course\n");
 		Collections.sort(students, new Student.ByCourse());
 		System.out.println(students);
-		
+
 	}
 
 }

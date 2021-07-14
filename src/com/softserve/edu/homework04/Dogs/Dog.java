@@ -17,9 +17,11 @@ class Dog {
 		numberOfDogs++;
 		this.age = age;
 	}
+
 	public void resetCounter() {
-		numberOfDogs=0;
+		numberOfDogs = 0;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -74,13 +76,13 @@ class Dog {
 	}
 
 	public String theOldest(Dog... dogs) {
-		String string="";
+		String string = "";
 		int oldest = 0;
 		for (Dog dog : dogs) {
 			if (dog.getAge() > oldest) {
 				oldest = dog.getAge();
 			}
-			
+
 		}
 		for (Dog dog : dogs) {
 			if (oldest == dog.getAge()) {

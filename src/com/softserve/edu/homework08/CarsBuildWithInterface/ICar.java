@@ -4,10 +4,15 @@ import java.time.LocalDate;
 
 public interface ICar {
 	String getModel();
+
 	LocalDate getDateOfProduction();
+
 	double getEngineCapacity();
+
 	String getColor();
+
 	boolean isAirConditioning();
+
 	int getPassengerCapasity();
-	
+
 }

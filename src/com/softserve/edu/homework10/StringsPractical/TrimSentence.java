@@ -1,7 +1,5 @@
 package com.softserve.edu.homework10.StringsPractical;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,8 +17,8 @@ public class TrimSentence {
 //			System.out.println("Found blank at:" + match.start() + " " + match.end());
 			newSentence.replace(match.start(), match.end(), " ");
 			match.reset();
-			}
-		
+		}
+
 		System.out.println("Sentence with blanks replaced:\n\t" + newSentence);
 	}
 }

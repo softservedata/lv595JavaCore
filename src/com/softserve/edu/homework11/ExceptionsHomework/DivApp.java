@@ -9,7 +9,8 @@ class Div {
 		double result = n1 / n2;
 		return result;
 	}
-	public static void readNumber(int start, int end) throws IOException{
+
+	public static void readNumber(int start, int end) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter your number: ");
 		int number = Integer.parseInt(br.readLine());
@@ -18,7 +19,7 @@ class Div {
 		} else {
 			System.out.printf("Your number %d is outside the given range from %d to %d. ", number, start, end);
 		}
-			
+
 	}
 }
 
@@ -31,7 +32,7 @@ public class DivApp {
 			double number2 = Double.parseDouble(br.readLine());
 			System.out.printf("\tResult of division of %.2f and %.2f is %.4f.\n", number1, number2,
 					Div.div(number1, number2));
-			
+
 			Div.readNumber(-24, 24);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

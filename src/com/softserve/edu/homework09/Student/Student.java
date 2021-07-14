@@ -7,7 +7,7 @@ import java.util.ListIterator;
 public class Student implements Comparable<Student> {
 	private String name;
 	private int course;
-	
+
 //----------------------------------------------------------------------------------------------------------------------------
 	public static void printStudents(List<Student> students, Integer cource) {
 		for (Student current : students) {
@@ -16,12 +16,12 @@ public class Student implements Comparable<Student> {
 			}
 		}
 	}
-	
-	public static void printWithIterator (List <Student> students, Integer cource) {
+
+	public static void printWithIterator(List<Student> students, Integer cource) {
 		ListIterator<Student> iter = students.listIterator();
 		while (iter.hasNext()) {
 			Student current = iter.next();
-			if (current.getCourse()==cource) {
+			if (current.getCourse() == cource) {
 				System.out.println(current);
 			}
 		}
@@ -42,9 +42,7 @@ public class Student implements Comparable<Student> {
 					: Integer.compare(o1.getCourse(), o2.getCourse());
 		}
 	}
-	
-	
-	
+
 //------------------------------------------------------------------------------------------------------------------------------
 	public String getName() {
 		return name;

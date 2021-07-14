@@ -20,7 +20,7 @@ public class IntOps {
 		for (int i = 0; i < (numbers.length / 2); i++) {
 			if (numbers[i] >= 0) {
 				sum += numbers[i];
-				if (i==(numbers.length/2-1)) {
+				if (i == (numbers.length / 2 - 1)) {
 					System.out.println("Sum of first 5 numbers: " + sum);
 				}
 			} else {

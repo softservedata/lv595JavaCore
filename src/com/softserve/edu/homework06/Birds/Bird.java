@@ -1,11 +1,11 @@
 package com.softserve.edu.homework06.Birds;
 
 public abstract class Bird {
-	
+
 	protected String name;
 	protected String feathers;
 	protected boolean layEggs;
-	
+
 	protected abstract void fly();
 
 	String getFeathers() {
@@ -15,7 +15,7 @@ public abstract class Bird {
 	void setFeathers(String feathers) {
 		this.feathers = feathers;
 	}
-	
+
 	public abstract String getClassName();
 
 //	String getName() {
@@ -34,5 +34,5 @@ public abstract class Bird {
 //		this.layEggs = layEggs;
 //	}
 //	
-	
+
 }

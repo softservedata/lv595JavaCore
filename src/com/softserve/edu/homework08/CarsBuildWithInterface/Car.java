@@ -2,9 +2,9 @@ package com.softserve.edu.homework08.CarsBuildWithInterface;
 
 import java.time.LocalDate;
 
+public class Car implements ICarBuilder, ICar, IColor, IDateOfPoduction, IEngineCapacity, IIsAirConditioned,
+		IPassengerCapasity, IModel {
 
-public class Car implements ICarBuilder, ICar, IColor, IDateOfPoduction, IEngineCapacity, IIsAirConditioned, IPassengerCapasity, IModel{
-	
 	private String model;
 	private LocalDate dateOfProduction;
 	private double engineCapacity;
@@ -16,52 +16,53 @@ public class Car implements ICarBuilder, ICar, IColor, IDateOfPoduction, IEngine
 	}
 //	Static method to start creating Car when there's no Instance of a car yet!!!
 
-	public static IModel getCar() {  //return next interface that requires user to add information about object. 
+	public static IModel getCar() { // return next interface that requires user to add information about object.
 		return new Car();
 	}
-	
+
 //	============================================================================================================================
 //	setters
 	@Override
 	public IDateOfPoduction setModel(String model) {
-		this.model= model;
+		this.model = model;
 		return this;
 	}
-	
+
 	@Override
 	public IEngineCapacity setDateOfProduction(LocalDate dateOfProduction) {
-		this.dateOfProduction=dateOfProduction;
+		this.dateOfProduction = dateOfProduction;
 		return this;
 	}
+
 	@Override
 	public IColor setEngineCapasity(double engineCapasity) {
-		this.engineCapacity=engineCapasity;
+		this.engineCapacity = engineCapasity;
 		return this;
 	}
-	
+
 	@Override
 	public IPassengerCapasity setColor(String color) {
-		this.color=color;
+		this.color = color;
 		return this;
 	}
-	
+
 	@Override
 	public IIsAirConditioned setPassengerCapasity(int passengerCapasity) {
-		this.passengerCapasity=passengerCapasity;
+		this.passengerCapasity = passengerCapasity;
 		return this;
 	}
-	
+
 	@Override
 	public ICarBuilder setIsAirConditioned(boolean isAirConditioned) {
-		this.isAirConditioning=isAirConditioned;
+		this.isAirConditioning = isAirConditioned;
 		return this;
 	}
-	
+
 	@Override
 	public ICar buildCar() {
 		return this;
 	}
-	
+
 //	=====================================================================================================
 //	getters
 
@@ -84,7 +85,7 @@ public class Car implements ICarBuilder, ICar, IColor, IDateOfPoduction, IEngine
 	public boolean isAirConditioning() {
 		return isAirConditioning;
 	}
-	
+
 	@Override
 	public int getPassengerCapasity() {
 		return passengerCapasity;
@@ -96,7 +97,5 @@ public class Car implements ICarBuilder, ICar, IColor, IDateOfPoduction, IEngine
 				+ ", color=" + color + ", passengerCapasity=" + passengerCapasity + ", isAirConditioning="
 				+ isAirConditioning + "]";
 	}
-	
-	
 
 }

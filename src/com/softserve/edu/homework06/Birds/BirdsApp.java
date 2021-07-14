@@ -12,9 +12,9 @@ public class BirdsApp {
 			System.out.print("Enter " + bird.getClassName() + " named " + bird.name + " feathers:");
 			bird.setFeathers(sc.next());
 		}
-		
+
 		sc.close();
-		
+
 		for (Bird bird : birds) {
 			bird.fly();
 			System.out.println(bird);

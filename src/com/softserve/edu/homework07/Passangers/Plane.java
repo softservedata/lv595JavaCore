@@ -9,7 +9,7 @@ public class Plane extends FlyingVehicle {
 
 	public Plane(int passengers, int maxDistance) {
 		super(passengers);
-		this.maxDistance=maxDistance;
+		this.maxDistance = maxDistance;
 	}
 
 	@Override
@@ -36,7 +36,5 @@ public class Plane extends FlyingVehicle {
 	public String toString() {
 		return super.toString() + ": Plane [Max Distance=" + maxDistance + ", Passengers= " + getPassengers() + "]";
 	}
-	
-	
-	
+
 }

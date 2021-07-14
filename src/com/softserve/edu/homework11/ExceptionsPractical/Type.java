@@ -2,7 +2,7 @@ package com.softserve.edu.homework11.ExceptionsPractical;
 
 public enum Type {
 	Tulips("tulip"), Lilies("lilie"), Orchid("orchid"), Roses("rose");
-	
+
 	private String type;
 
 	private Type(String type) {
@@ -12,7 +12,5 @@ public enum Type {
 	public String getType() {
 		return type;
 	}
-	
-	
-	
+
 }

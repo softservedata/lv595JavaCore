@@ -3,12 +3,12 @@ package com.softserve.edu.homework09.EmployeeMap;
 public class Employee {
 	private String name;
 	private int ID;
-	
+
 	public Employee() {
 		this.name = "";
 		ID = 0;
 	}
-	
+
 	public Employee(String name, int iD) {
 		this.name = name;
 		ID = iD;
@@ -62,9 +62,5 @@ public class Employee {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
 
 }

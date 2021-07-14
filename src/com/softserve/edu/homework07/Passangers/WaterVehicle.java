@@ -10,13 +10,12 @@ public class WaterVehicle extends Passengers implements Vehicle {
 	}
 
 	protected void isSailing() {
-		System.out.println("\tWater vehicle is sailing!");	
+		System.out.println("\tWater vehicle is sailing!");
 	}
 
 	@Override
 	public String toString() {
 		return "Water Vehicle";
 	}
-	
-	
+
 }

@@ -4,12 +4,12 @@ public abstract class Person {
 	private String name;
 	private double salary;
 
-	public Person (String name) {
-		this.name=name;
+	public Person(String name) {
+		this.name = name;
 		System.out.println("Constructr form Person class.");
-		
+
 	}
-	
+
 	public Person(String name, double salary) {
 		this.name = name;
 		this.salary = salary;
@@ -28,7 +28,7 @@ public abstract class Person {
 	public String toString() {
 		return "Person [name=" + name + "]";
 	}
-	
+
 	public abstract void print();
 
 	double getSalary() {
@@ -38,6 +38,5 @@ public abstract class Person {
 	void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
 
 }

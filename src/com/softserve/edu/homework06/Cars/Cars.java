@@ -4,7 +4,7 @@ public abstract class Cars {
 	String model;
 	int maxSpeed;
 	int yearOfManufacture;
-	
+
 //	public Cars (String model, int maxSpeed, int yearOfManufacure) {
 //		this.model=model;
 //		this.maxSpeed=maxSpeed;
@@ -36,13 +36,12 @@ public abstract class Cars {
 	}
 
 	public abstract void run();
-	
+
 	public abstract void stop();
-	
+
 	@Override
 	public String toString() {
 		return "Cars [model=" + model + ", maxSpeed=" + maxSpeed + ", yearOfManufacture=" + yearOfManufacture + "]";
 	}
-	
-	
+
 }

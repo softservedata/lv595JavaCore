@@ -7,7 +7,7 @@ public class Passengers implements Comparable<Passengers> {
 
 //	=========================================================================================
 
-	static class PassengerComparator implements Comparator <Object> {
+	static class PassengerComparator implements Comparator<Object> {
 		public int compare(Object o1, Object o2) {
 			return Integer.compare(((Passengers) o1).passengers, ((Passengers) o2).passengers);
 		}

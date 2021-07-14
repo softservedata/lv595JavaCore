@@ -1,6 +1,6 @@
 package com.softserve.edu.homework07.Passangers;
 
-public class GroundVehicle  extends Passengers implements Vehicle {
+public class GroundVehicle extends Passengers implements Vehicle {
 
 	public GroundVehicle() {
 	}
@@ -8,7 +8,7 @@ public class GroundVehicle  extends Passengers implements Vehicle {
 	public GroundVehicle(int passengers) {
 		super(passengers);
 	}
-	
+
 	protected void drive() {
 		System.out.println("\tGround vehicle riding!");
 	}
@@ -17,7 +17,5 @@ public class GroundVehicle  extends Passengers implements Vehicle {
 	public String toString() {
 		return "Ground Vehicle";
 	}
-	
-	
 
 }

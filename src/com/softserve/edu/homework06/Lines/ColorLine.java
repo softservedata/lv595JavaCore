@@ -1,15 +1,14 @@
 package com.softserve.edu.homework06.Lines;
 
-public class ColorLine extends Line{
-	
+public class ColorLine extends Line {
+
 	private String color;
-	
-	public ColorLine (Point point1, Point point2, String color) {
+
+	public ColorLine(Point point1, Point point2, String color) {
 		super(point1, point2);
-		this.color=color;
-		
+		this.color = color;
+
 	}
-	
 
 	@Override
 	public String toString() {

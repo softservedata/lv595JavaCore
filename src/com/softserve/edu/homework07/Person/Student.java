@@ -1,7 +1,7 @@
 package com.softserve.edu.homework07.Person;
 
 public class Student extends Person {
-	
+
 	private final String TYPE_PERSON = "Student";
 
 	public Student(String name) {
@@ -19,6 +19,5 @@ public class Student extends Person {
 	public String toString() {
 		return "Student [" + super.toString() + "]";
 	}
-	
-	
+
 }

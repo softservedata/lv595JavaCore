@@ -96,7 +96,7 @@ public class IOStreamsApp {
 			bw.append(logestLine.concat(" - LONGEST."));
 			bw.newLine();
 			bw.append(String.format("%n\tWriting all matteches to pattern \"%s\" to the file.%n", pattern));
-		
+
 			for (String current : matched) {
 				System.out.println("Matched pattern: " + current);
 				bw.append(current);

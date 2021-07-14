@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class EmployeeSet {
 	int tabNumber;
 	String name;
-	
+
 	public EmployeeSet(int tabNumber, String name) {
 		super();
 		this.tabNumber = tabNumber;
@@ -30,7 +30,7 @@ public class EmployeeSet {
 	String getName() {
 		return name;
 	}
-	
+
 	static class NameComparator implements Comparator {
 		public int compare(Object o1, Object o2) {
 			return ((EmployeeSet) o1).getName().compareTo(((EmployeeSet) o2).getName());
@@ -39,12 +39,9 @@ public class EmployeeSet {
 
 	static class TabComparator implements Comparator {
 		public int compare(Object o1, Object o2) {
-		    return ((EmployeeSet)o1).getTabNumber() - ((EmployeeSet)o2).getTabNumber();
-		  }
+			return ((EmployeeSet) o1).getTabNumber() - ((EmployeeSet) o2).getTabNumber();
+		}
 
 	}
 
-	
-	
-	
 }

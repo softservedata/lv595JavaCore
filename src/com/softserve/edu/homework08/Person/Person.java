@@ -1,17 +1,15 @@
 package com.softserve.edu.homework08.Person;
 
 public abstract class Person implements Cloneable {
-	private FullName fullName; 
+	private FullName fullName;
 	private int age;
-	
-	
-	
-	public Person () {	
+
+	public Person() {
 	}
-	
-	public Person (FullName fullName, int age) {
+
+	public Person(FullName fullName, int age) {
 		this.fullName = fullName;
-		this.age=age;		
+		this.age = age;
 	}
 
 	public FullName getFullName() {
@@ -34,18 +32,18 @@ public abstract class Person implements Cloneable {
 	public String toString() {
 		return "Person [fullName=" + fullName + ", age=" + age + ", FullName toString()=" + super.toString() + "]";
 	}
-	
-	public Person clone () throws CloneNotSupportedException {
+
+	public Person clone() throws CloneNotSupportedException {
 		Person personClone = (Person) super.clone();
 		personClone.fullName = (FullName) this.fullName.clone();
 		return personClone;
 	}
-	
+
 	public String info() {
-		return "First name: " + fullName.getFirstName() + ", Last name: " + fullName.getLastName() + ", Age: " + age; 
+		return "First name: " + fullName.getFirstName() + ", Last name: " + fullName.getLastName() + ", Age: " + age;
 
 	}
-	
+
 	public abstract String activity();
 
 }

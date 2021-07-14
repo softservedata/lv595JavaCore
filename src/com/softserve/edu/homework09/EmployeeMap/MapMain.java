@@ -40,9 +40,8 @@ public class MapMain {
 		String inputName = scan.next();
 		if (employeeMap.containsValue(inputName)) {
 			for (Entry<Integer, String> entry : employeeMap.entrySet()) {
-				if(entry.getValue().equals(inputName)) {
-				System.out.printf("Employee Name: %s, Emplyee ID: %d.\n", inputName,
-						entry.getKey());
+				if (entry.getValue().equals(inputName)) {
+					System.out.printf("Employee Name: %s, Emplyee ID: %d.\n", inputName, entry.getKey());
 				}
 			}
 		} else {

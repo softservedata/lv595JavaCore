@@ -1,15 +1,30 @@
 package com.softserve.edu.homework04.NumbersChecker;
 
 public enum HttpErrors {
-	BadRequest("Bad Request", 400){public String flagError() {return "You made bad request!";}},
-	Unauthorized("Unauthorized", 401){public String flagError() {return "You are not authorized!";}},
-	Forbidden("Forbidden", 403){public String flagError() {return "You request is forbidden!";}},
-	NotFound("Not Found", 404){public String flagError() {return "Could not find!";}};
+	BadRequest("Bad Request", 400) {
+		public String flagError() {
+			return "You made bad request!";
+		}
+	},
+	Unauthorized("Unauthorized", 401) {
+		public String flagError() {
+			return "You are not authorized!";
+		}
+	},
+	Forbidden("Forbidden", 403) {
+		public String flagError() {
+			return "You request is forbidden!";
+		}
+	},
+	NotFound("Not Found", 404) {
+		public String flagError() {
+			return "Could not find!";
+		}
+	};
 
 //		BadRequest  Unauthorized Forbidden NotFound
 	private String name;
 	private int code;
-
 
 	private HttpErrors(String name, int code) {
 		this.name = name;
@@ -17,7 +32,7 @@ public enum HttpErrors {
 	}
 
 	public String promptError() {
-		return "HTTP Error " + this.code + " - " + this.name +"!\n";
+		return "HTTP Error " + this.code + " - " + this.name + "!\n";
 	}
 
 	public String getDiscription() {
@@ -38,9 +53,8 @@ public enum HttpErrors {
 					+ "the client must authenticate itself to get the requested response.";
 		default:
 			return "Unknown error";
-		}		
+		}
 	}
-	
+
 	public abstract String flagError();
 }
-

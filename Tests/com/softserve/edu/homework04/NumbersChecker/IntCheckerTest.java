@@ -1,14 +1,11 @@
 package com.softserve.edu.homework04.NumbersChecker;
 
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.softserve.edu.homework04.NumbersChecker.IntChecker;
 
 public class IntCheckerTest {
 
@@ -37,16 +34,16 @@ public class IntCheckerTest {
 
 		int actualMax;
 		int expectedMax = 99999;
-		actualMax=int1.getMax();
+		actualMax = int1.getMax();
 		Assert.assertEquals(expectedMax, actualMax);
-		
+
 		int actualMin;
 		int expectedMin = 1;
-		actualMin=int1.getMin();
+		actualMin = int1.getMin();
 		Assert.assertEquals(expectedMin, actualMin);
-		
+
 		int4.resetCounter();
-		
+
 	}
 
 	@Test
@@ -58,14 +55,14 @@ public class IntCheckerTest {
 
 		int actualMax;
 		int expectedMax = 19995456;
-		actualMax=int1.getMax();
+		actualMax = int1.getMax();
 		Assert.assertEquals(expectedMax, actualMax);
-		
+
 		int actualMin;
 		int expectedMin = 0;
-		actualMin=int1.getMin();
+		actualMin = int1.getMin();
 		Assert.assertEquals(expectedMin, actualMin);
-		
+
 		int4.resetCounter();
 	}
 
@@ -78,14 +75,14 @@ public class IntCheckerTest {
 
 		int actualMax;
 		int expectedMax = 100500;
-		actualMax=int1.getMax();
+		actualMax = int1.getMax();
 		Assert.assertEquals(expectedMax, actualMax);
-		
+
 		int actualMin;
 		int expectedMin = 19;
-		actualMin=int1.getMin();
+		actualMin = int1.getMin();
 		Assert.assertEquals(expectedMin, actualMin);
-		
+
 		int4.resetCounter();
 	}
 

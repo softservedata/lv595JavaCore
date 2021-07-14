@@ -114,7 +114,7 @@ public class PlantApp {
 		}
 		Iterator iterate = plantsList.listIterator();
 		while (iterate.hasNext()) {
-		System.out.println(iterate.next());
+			System.out.println(iterate.next());
 		}
 	}
 }

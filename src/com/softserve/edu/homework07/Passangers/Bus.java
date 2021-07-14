@@ -9,7 +9,7 @@ public class Bus extends GroundVehicle {
 	public Bus(String route, int passengers) {
 		super(passengers);
 		this.route = route;
-		}
+	}
 
 	public String getRoute() {
 		return route;
@@ -27,7 +27,7 @@ public class Bus extends GroundVehicle {
 
 	@Override
 	public String toString() {
-		return  super.toString() + ": Bus [Route= " + route + ", Passengers= " + getPassengers() + "]";
+		return super.toString() + ": Bus [Route= " + route + ", Passengers= " + getPassengers() + "]";
 	}
 
 }

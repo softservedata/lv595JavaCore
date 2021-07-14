@@ -7,13 +7,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CurrencyPattern {
-	public static void output (int i) {
+	public static void output(int i) {
 		System.out.println("int" + i);
 	}
-	public static void output (Integer i) {
+
+	public static void output(Integer i) {
 		System.out.println("Integer" + i);
 	}
-	
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -22,15 +23,15 @@ public class CurrencyPattern {
 		Pattern currency = Pattern.compile("(\\$([\\d\\,]*)(\\.)(\\d{2}))");
 		Matcher match = currency.matcher(text);
 		System.out.println("Value: " + text.charAt(0));
-		
+
 		while (match.find()) {
 			System.out.println("Currency found:\n\t" + text.substring(match.start(), match.end()));
 		}
 
 		System.out.println("Done checking text.");
-		
+
 		CurrencyPattern.output(3);
-		
+
 	}
 
 }

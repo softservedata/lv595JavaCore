@@ -1,8 +1,8 @@
 package com.softserve.edu.homework11.ExceptionsPractical;
 
 public enum Color {
-	Red ("Red"), White ("White"), Blue ("Blue");
-	
+	Red("Red"), White("White"), Blue("Blue");
+
 	private String color;
 
 	private Color(String color) {
@@ -12,7 +12,5 @@ public enum Color {
 	public String getColor() {
 		return color;
 	}
-	
-	
 
 }

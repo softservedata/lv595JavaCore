@@ -21,7 +21,5 @@ public class Track extends Cars {
 	public String toString() {
 		return "Track [model=" + model + ", maxSpeed=" + maxSpeed + ", yearOfManufacture=" + yearOfManufacture + "]";
 	}
-	
-	
-	
+
 }

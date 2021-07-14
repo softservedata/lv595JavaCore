@@ -3,6 +3,7 @@ package com.softserve.edu.homework07.Person;
 public class Cleaner extends Staff {
 
 	private final String TYPE_PERSON = "Cleaner";
+
 	public Cleaner(String name, double salary) {
 		super(name, salary);
 		System.out.println("Constructr form Cleaner class.");
@@ -22,6 +23,5 @@ public class Cleaner extends Staff {
 	public String toString() {
 		return "Cleaner [" + super.toString() + "]";
 	}
-	
-	
+
 }

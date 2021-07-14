@@ -30,6 +30,5 @@ public class Motorcycle extends GroundVehicle {
 	public String toString() {
 		return super.toString() + ": Motorcycle [Max Speed=" + maxSpeed + ", Passengers= " + getPassengers() + "]";
 	}
-	
-	
+
 }

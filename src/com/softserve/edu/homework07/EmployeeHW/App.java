@@ -1,7 +1,5 @@
 package com.softserve.edu.homework07.EmployeeHW;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,7 +15,7 @@ public class App {
 		Set<EmployeeSet> set1 = new TreeSet(EmployeeSet.getTabComparator());
 		set1.addAll(set);
 		System.out.println(set1);
-	
+
 	}
 
 }

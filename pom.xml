@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.softserve.edu</groupId>
+	<groupId>edu</groupId>
 	<artifactId>lv595jCore</artifactId>
 	<version>1.0</version>
 
@@ -14,9 +14,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<!-- - - - - - Encoding - - - - - -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- - - - - - Java - - - - - -->
 		<java.version>16</java.version>
 	</properties>
 

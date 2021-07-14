@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 public class SentenceApp {
 	public static void main(String[] args) {
 		List<String> words = new ArrayList<>();
-		
+
 		String sentence;
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			System.out.println("Enter your sentence: ");
@@ -23,15 +23,16 @@ public class SentenceApp {
 				words.add((sentence.substring(match.start(), match.end())));
 				System.out.printf("Added [ %s ] to list of words.%n", (sentence.substring(match.start(), match.end())));
 			}
-			String longestWord="";
-			int longestWordIndex=0;
-			for (String word:words) {
-				if (word.length()>longestWord.length()) {
-					longestWordIndex= words.indexOf(word);
-					longestWord= word;
+			String longestWord = "";
+			int longestWordIndex = 0;
+			for (String word : words) {
+				if (word.length() > longestWord.length()) {
+					longestWordIndex = words.indexOf(word);
+					longestWord = word;
 				}
 			}
-			System.out.printf("Longest word in sentence is: %s. It has : %d letters.%n", longestWord, longestWord.length());
+			System.out.printf("Longest word in sentence is: %s. It has : %d letters.%n", longestWord,
+					longestWord.length());
 			System.out.println("Second word in reverce order is: " + new StringBuilder(words.get(1)).reverse());
 
 		} catch (IOException e) {

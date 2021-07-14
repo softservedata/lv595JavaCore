@@ -1,9 +1,5 @@
 package com.softserve.edu.homework06.Employee;
 
-
-
-
-
 public class EmployeeApp {
 	public static void main(String[] args) {
 
@@ -34,12 +30,9 @@ public class EmployeeApp {
 			System.out.println(second.report());
 
 		}
-		
-		
+
 		int i = 32;
 		double d = 94;
-		
-	
 
 	}
 

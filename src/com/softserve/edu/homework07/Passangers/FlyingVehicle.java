@@ -8,12 +8,12 @@ public class FlyingVehicle extends Passengers implements Vehicle {
 	public FlyingVehicle(int passengers) {
 		super(passengers);
 	}
-	
+
 	protected void fly() {
 		System.out.println("\tFlying vehicle flying!");
-		
+
 	}
-	
+
 	protected void land() {
 		System.out.println("\tFlying vehicle landed!");
 	}
@@ -23,7 +23,4 @@ public class FlyingVehicle extends Passengers implements Vehicle {
 		return "Flying Vehicle";
 	}
 
-	
-	
-	
 }

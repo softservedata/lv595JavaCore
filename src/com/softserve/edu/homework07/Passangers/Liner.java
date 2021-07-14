@@ -9,7 +9,7 @@ public class Liner extends WaterVehicle {
 
 	public Liner(int floors, int passengers) {
 		super(passengers);
-		this.floors=floors;
+		this.floors = floors;
 	}
 
 	@Override
@@ -31,6 +31,4 @@ public class Liner extends WaterVehicle {
 		return super.toString() + ": Liner [Floors=" + floors + ", Passengers= " + getPassengers() + "]";
 	}
 
-	
-	
 }
