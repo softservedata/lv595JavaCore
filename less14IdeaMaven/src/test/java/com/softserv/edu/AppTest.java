@@ -1,7 +1,7 @@
 package com.softserv.edu;
 
-import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -13,8 +13,9 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+//    public void shouldAnswerWithTrue()
+    public void testApp()
     {
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 }
