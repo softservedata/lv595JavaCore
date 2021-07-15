@@ -1,0 +1,9 @@
+	Writing longest and shortest lines.
+
+Doctors - SHORTEST.
+The UK government does not have an obligation to provide a NHS dentist to every resident and therefore there is also an option to enlist with a private dentist.  It is worth noting that private dental fees can be quite high, however most private healthcare policies will have a dental provision. - LONGEST.
+
+	Writing all matteches to pattern "eve" to the file.
+This overview is designed to provide a quick reference for you, however should you require any clarification on any of the following items, please do come back to me and I will be delighted to go through this with you.
+The UK government does not have an obligation to provide a NHS dentist to every resident and therefore there is also an option to enlist with a private dentist.  It is worth noting that private dental fees can be quite high, however most private healthcare policies will have a dental provision.
+I hope you find this information useful. However should you have any questions please do not hesitate to contact me and I will be delighted to discuss any of the enclosed information with you.
