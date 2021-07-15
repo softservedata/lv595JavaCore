@@ -1,8 +1,0 @@
-
-Number of lines in the input file: 14
-
-Longest line is:
-But now covid ruined it all and I'm stuck in Aberdeen for last 14 month....
-It has 168 symbols.
-
-This code written by Nazar Ivankiv, DOB - 26 January 1995. Written on  2021-07-12
