@@ -1,0 +1,3 @@
+Number of lines in file1.txt is : 4
+the longest line in file1.txt. is I am work in internet service provider Astra
+My Birth date 21.08.1997
