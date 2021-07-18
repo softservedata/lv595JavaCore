@@ -6,24 +6,26 @@ import java.io.InputStreamReader;
 
 public class Hm2 {
 
-    public static char[] encrypt(String s, int n) {
+    public static String encrypt(String s, int n) {
 
         char[] enc = new char[s.length()];
         for (int i = 0; i < s.length(); i++) {
             enc[i] = (char) ((int) (s.charAt(i)) + n);
         }
         System.out.println("Your encrypt word: ");
-        return enc;
+        String encrypted = new String(enc);
+        return encrypted;
     }
 
-    public static char[] decrypt(String s, int n) {
+    public static String decrypt(String s, int n) {
 
         char[] dec = new char[s.length()];
         for (int i = 0; i < s.length(); i++) {
             dec[i] = (char) ((int) (s.charAt(i)) - n);
         }
         System.out.println("Your decrypt word: ");
-        return dec;
+        String decrypted = new String(dec);
+        return decrypted;
     }
 
     public static void main(String[] args) {

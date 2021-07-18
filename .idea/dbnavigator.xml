@@ -24,15 +24,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="6d3e94a1-ebf5-4017-83a6-3f605ca42928">
-        <schema name="nasibov" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6d3e94a1-ebf5-4017-83a6-3f605ca42928">
-      <console name="Connection" type="STANDARD" schema="murad" session="Main"><![CDATA[create table car;]]></console>
+      <console name="Connection" type="STANDARD" schema="nasibov" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
