@@ -10,13 +10,13 @@ import java.util.List;
 public class HwAppl {
     public static void main(String[] args) throws SQLException {
         System.out.println("Satrting main");
-    JulHw julhw = new JulHw();
-    julhw.run();
-    julhw.del();
+    Hw hw = new Hw();
+    hw.run();
+    hw.del();
     }
 }
 
-class JulHw{
+class Hw{
     private Connection con ;//= null;
     // Mysql
     private String username ;//= "devops";
@@ -24,7 +24,7 @@ class JulHw{
     private String URL ;//= "jdbc:mysql://192.168.153.134:3306/lv595";
     BufferedReader br;
 
-    public JulHw(){
+    public Hw(){
         con = null;
         // Mysql
         username = "root";
@@ -32,7 +32,7 @@ class JulHw{
         URL = "jdbc:mysql://127.0.0.1:3306";
     }
 
-    public JulHw(Connection con, String username, String password, String URL){
+    public Hw(Connection con, String username, String password, String URL){
         this.con = con;
         // Mysql
         this.username = username;
