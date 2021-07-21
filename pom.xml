@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.softserve.edu</groupId>
-	<artifactId>lv595jCore</artifactId>
+	<artifactId>lv595web</artifactId>
 	<version>1.0</version>
 
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>${project.artifactId}</name>
 	<url>http://maven.apache.org</url>
@@ -47,9 +47,23 @@
 			<version>42.2.23</version>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+		<finalName>dev</finalName>
 		<plugins>
 
 			<plugin>
@@ -80,6 +94,15 @@
 					<includes>
 						<include>**/*.java</include>
 					</includes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<warName>dev</warName>
 				</configuration>
 			</plugin>
 
